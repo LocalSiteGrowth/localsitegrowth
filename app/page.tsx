@@ -4,9 +4,9 @@ import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
 import WhatIDo from "@/components/WhatIDo";
-import HowItWorks from "@/components/HowItWorks";
 import LocalVisibility from "@/components/LocalVisibility";
 import WhyWorkWithMe from "@/components/WhyWorkWithMe";
 import DemoSites from "@/components/DemoSites";
@@ -54,9 +54,9 @@ export default function Home() {
     >
       <Navbar />
       <Hero />
+      <HowItWorks />
       <WhoThisIsFor />
       <WhatIDo />
-      <HowItWorks />
       <LocalVisibility />
       <WhyWorkWithMe />
       <DemoSites />
