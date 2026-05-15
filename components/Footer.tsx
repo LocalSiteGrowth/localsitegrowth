@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer({ 
   onPrivacyClick, 
@@ -15,8 +16,14 @@ export default function Footer({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-start mb-20">
           {/* Logo */}
           <div className="flex flex-col items-start">
-            <Link href="/" className="text-white text-[28px] font-bold leading-none mb-4">
-              Local Site Growth
+            <Link href="/" className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="Local Site Growth"
+                width={200}
+                height={50}
+                className="h-10 md:h-12 w-auto object-contain"
+              />
             </Link>
           </div>
 

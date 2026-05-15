@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -36,8 +37,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-white text-xl font-bold tracking-tight">
-          Local Site Growth
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Local Site Growth"
+            width={180}
+            height={40}
+            className="h-8 md:h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Links */}
@@ -87,10 +95,15 @@ export default function Navbar() {
           <div className="flex items-center justify-between mb-12">
             <Link
               href="/"
-              className="text-white text-xl font-bold"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Local Site Growth
+              <Image
+                src="/logo.png"
+                alt="Local Site Growth"
+                width={180}
+                height={40}
+                className="h-8 w-auto object-contain"
+              />
             </Link>
             <button
               className="text-white"
