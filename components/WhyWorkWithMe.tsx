@@ -103,7 +103,7 @@ export default function WhyWorkWithMe() {
           {benefits.map((benefit) => (
             <div
               key={benefit.heading}
-              className="p-8 bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:border-accent/40 hover:-translate-y-[3px]"
+              className="p-8 bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:-translate-y-[3px]"
             >
               <h3 className="text-xl font-semibold text-white mb-4">
                 {benefit.heading}

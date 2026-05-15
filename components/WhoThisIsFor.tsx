@@ -91,13 +91,13 @@ export default function WhoThisIsFor() {
           {targetAudience.map((item) => (
             <div
               key={item.heading}
-              className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:-translate-y-[3px] overflow-hidden flex flex-col"
+              className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-300 hover:-translate-y-[3px] overflow-hidden flex flex-col"
             >
               <div className="w-full h-48 sm:h-56 lg:h-64 relative overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.heading}
-                  className="w-full h-full object-cover block"
+                  className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-110"
                   loading="eager"
                 />
               </div>

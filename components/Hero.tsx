@@ -109,14 +109,14 @@ export default function Hero() {
         {/* Image */}
         <div
           ref={imageRef}
-          className="relative aspect-[4/3] lg:aspect-square w-full"
+          className="group relative aspect-[4/3] lg:aspect-square w-full"
         >
           <div className="relative h-full w-full rounded-[16px] overflow-hidden">
             <Image
               src="https://www.localsitegrowth.com/assets/uploads/aa502cb4-2fd4-407a-a8d1-a42ba5a5c050/f38856ae-1de7-41c8-af0f-8781d69b7b91.jpg"
               alt="Local Site Growth Showcase"
               fill
-              className="object-cover desaturate-[0.2]"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
             {/* Vignette */}

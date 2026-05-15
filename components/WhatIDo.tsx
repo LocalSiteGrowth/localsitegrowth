@@ -117,12 +117,12 @@ export default function WhatIDo() {
           ))}
         </div>
 
-        <div ref={imageRef} className="relative max-w-[800px] mx-auto aspect-video rounded-[12px] overflow-hidden">
+        <div ref={imageRef} className="group relative max-w-[800px] mx-auto aspect-video rounded-[12px] overflow-hidden">
           <Image
             src="https://www.localsitegrowth.com/assets/uploads/aa502cb4-2fd4-407a-a8d1-a42ba5a5c050/a0d1cf8a-bb78-4e89-97ed-e71cfa6fb101.jpg"
             alt="Work Showcase"
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       </div>
