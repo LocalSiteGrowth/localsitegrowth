@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import "./globals.css";
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-outfit',
 })
 
 export const metadata: Metadata = {
@@ -42,14 +42,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${outfit.variable} h-full antialiased`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-white font-inter">
+      <body className="min-h-full flex flex-col bg-background text-white font-outfit">
         {children}
       </body>
     </html>
