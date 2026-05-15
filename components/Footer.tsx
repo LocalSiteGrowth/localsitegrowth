@@ -20,9 +20,10 @@ export default function Footer({
               <Image
                 src="/logo.png"
                 alt="Local Site Growth"
-                width={200}
-                height={50}
-                className="h-10 md:h-12 w-auto object-contain"
+                width={160}
+                height={44}
+                style={{ width: 'auto', height: '44px' }}
+                className="object-contain"
               />
             </Link>
           </div>

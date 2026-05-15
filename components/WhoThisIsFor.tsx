@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -88,22 +87,21 @@ export default function WhoThisIsFor() {
           {targetAudience.map((item) => (
             <div
               key={item.heading}
-              className="group p-8 bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:border-accent/40 hover:-translate-y-[3px]"
+              className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:border-accent/40 hover:-translate-y-[3px] overflow-hidden"
             >
-              <div className="relative h-48 w-full mb-8 overflow-hidden rounded-lg">
-                <Image
-                  src={item.image}
-                  alt={item.heading}
-                  fill
-                  className="object-contain desaturate group-hover:desaturate-0 transition-all duration-500"
-                />
+              <img
+                src={item.image}
+                alt={item.heading}
+                className="w-full h-48 object-cover rounded-t-xl desaturate group-hover:desaturate-0 transition-all duration-500"
+              />
+              <div className="p-8">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {item.heading}
+                </h3>
+                <p className="text-secondary text-[15px] leading-relaxed">
+                  {item.body}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                {item.heading}
-              </h3>
-              <p className="text-secondary text-[15px] leading-relaxed">
-                {item.body}
-              </p>
             </div>
           ))}
         </div>
