@@ -36,26 +36,30 @@ export default function WhoThisIsFor() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Heading animation
       gsap.from(headingRef.current, {
-        y: 30,
+        y: 20,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.5,
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 90%",
+          once: true,
         },
       });
 
+      // Card animation - simplified to just Y movement to avoid opacity issues
       const cards = gridRef.current?.children;
       if (cards) {
         gsap.from(cards, {
           y: 30,
-          opacity: 0,
           duration: 0.6,
           stagger: 0.1,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: gridRef.current,
             start: "top 85%",
+            once: true,
           },
         });
       }
@@ -87,14 +91,14 @@ export default function WhoThisIsFor() {
           {targetAudience.map((item) => (
             <div
               key={item.heading}
-              className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:border-accent/40 hover:-translate-y-[3px] overflow-hidden"
+              className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:border-accent/40 hover:-translate-y-[3px] overflow-hidden flex flex-col"
             >
-              <div className="relative h-48 w-full">
+              <div className="w-full h-48 sm:h-56 lg:h-64 relative">
                 <img
                   src={item.image}
                   alt={item.heading}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  className="rounded-t-xl"
+                  className="w-full h-full object-cover block"
+                  loading="eager"
                 />
               </div>
               <div className="p-8">
