@@ -23,34 +23,20 @@ export default function Home() {
   const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // Initial page fade in with fallback
-    const fadeIn = () => {
-      if (mainRef.current) {
-        gsap.to(mainRef.current, {
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        });
-      }
-    };
-
-    // Run animation
-    fadeIn();
-
-    // Fallback: Ensure visibility after 500ms regardless of GSAP
-    const fallback = setTimeout(() => {
-      if (mainRef.current) {
-        mainRef.current.style.opacity = "1";
-      }
-    }, 500);
-
-    return () => clearTimeout(fallback);
+    // Initial page fade in using from() so it's visible by default
+    if (mainRef.current) {
+      gsap.from(mainRef.current, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+    }
   }, []);
 
   return (
     <main 
       ref={mainRef}
-      className="relative opacity-0 bg-[#0a0a0a] min-h-screen"
+      className="relative bg-[#0a0a0a] min-h-screen"
     >
       <Navbar />
       <Hero />

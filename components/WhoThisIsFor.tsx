@@ -37,25 +37,25 @@ export default function WhoThisIsFor() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
-        y: 40,
+        y: 30,
         opacity: 0,
-        duration: 0.75,
+        duration: 0.6,
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 85%",
+          start: "top 90%",
         },
       });
 
       const cards = gridRef.current?.children;
       if (cards) {
         gsap.from(cards, {
-          y: 50,
+          y: 30,
           opacity: 0,
-          duration: 0.7,
-          stagger: 0.12,
+          duration: 0.6,
+          stagger: 0.1,
           scrollTrigger: {
             trigger: gridRef.current,
-            start: "top 80%",
+            start: "top 85%",
           },
         });
       }
@@ -89,12 +89,14 @@ export default function WhoThisIsFor() {
               key={item.heading}
               className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:border-accent/40 hover:-translate-y-[3px] overflow-hidden"
             >
-              <img
-                src={item.image}
-                alt={item.heading}
-                style={{ width: '100%', height: '192px', objectFit: 'cover', borderRadius: '10px 10px 0 0' }}
-                className="desaturate group-hover:desaturate-0 transition-all duration-500"
-              />
+              <div className="relative h-48 w-full">
+                <img
+                  src={item.image}
+                  alt={item.heading}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  className="rounded-t-xl"
+                />
+              </div>
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {item.heading}
