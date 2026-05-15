@@ -48,7 +48,7 @@ export default function WhoThisIsFor() {
         },
       });
 
-      // Card animation - simplified to just Y movement to avoid opacity issues
+      // Card animation
       const cards = gridRef.current?.children;
       if (cards) {
         gsap.from(cards, {
@@ -87,13 +87,13 @@ export default function WhoThisIsFor() {
           </p>
         </div>
 
-        <div ref={gridRef} className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+        <div ref={gridRef} className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16 items-stretch">
           {targetAudience.map((item) => (
             <div
               key={item.heading}
-              className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:border-accent/40 hover:-translate-y-[3px] overflow-hidden flex flex-col"
+              className="group bg-[#111111] border border-[#1e1e1e] rounded-[12px] transition-all duration-200 hover:-translate-y-[3px] overflow-hidden flex flex-col"
             >
-              <div className="w-full h-48 sm:h-56 lg:h-64 relative">
+              <div className="w-full h-48 sm:h-56 lg:h-64 relative overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.heading}
@@ -101,7 +101,7 @@ export default function WhoThisIsFor() {
                   loading="eager"
                 />
               </div>
-              <div className="p-8">
+              <div className="p-8 flex-grow">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {item.heading}
                 </h3>
