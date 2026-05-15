@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google'
 import "./globals.css";
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: 'Custom Web Design for Local & International Businesses | Local Site Growth',
@@ -48,7 +49,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-white">
+      <body className="min-h-full flex flex-col bg-background text-white font-inter">
         {children}
       </body>
     </html>

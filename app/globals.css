@@ -7,7 +7,7 @@
   --color-accent: #4fd1c5;
   --color-secondary: #a0aec0;
   
-  --font-inter: "Inter", sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
 }
 
 @layer base {
@@ -23,12 +23,12 @@
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Removed initial opacity 0 to prevent total black screen if JS fails */
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: #ffffff;
+    font-family: var(--font-inter);
   }
 }
 

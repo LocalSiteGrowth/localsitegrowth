@@ -92,7 +92,8 @@ export default function WhoThisIsFor() {
               <img
                 src={item.image}
                 alt={item.heading}
-                className="w-full h-48 object-cover rounded-t-xl desaturate group-hover:desaturate-0 transition-all duration-500"
+                style={{ width: '100%', height: '192px', objectFit: 'cover', borderRadius: '10px 10px 0 0' }}
+                className="desaturate group-hover:desaturate-0 transition-all duration-500"
               />
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-3">
