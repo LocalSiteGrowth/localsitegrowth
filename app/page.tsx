@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -20,18 +20,38 @@ import Modal from "@/components/Modal";
 export default function Home() {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // Initial page fade in
-    gsap.to("body", {
-      opacity: 1,
-      duration: 0.4,
-      ease: "power2.out",
-    });
+    // Initial page fade in with fallback
+    const fadeIn = () => {
+      if (mainRef.current) {
+        gsap.to(mainRef.current, {
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.out",
+        });
+      }
+    };
+
+    // Run animation
+    fadeIn();
+
+    // Fallback: Ensure visibility after 500ms regardless of GSAP
+    const fallback = setTimeout(() => {
+      if (mainRef.current) {
+        mainRef.current.style.opacity = "1";
+      }
+    }, 500);
+
+    return () => clearTimeout(fallback);
   }, []);
 
   return (
-    <main className="relative opacity-0">
+    <main 
+      ref={mainRef}
+      className="relative opacity-0 bg-[#0a0a0a] min-h-screen"
+    >
       <Navbar />
       <Hero />
       <WhoThisIsFor />

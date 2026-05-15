@@ -17,13 +17,13 @@
   }
 
   body {
-    background-color: var(--color-background);
+    background-color: #0a0a0a;
     color: #ffffff;
     font-family: var(--font-inter);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    opacity: 0;
+    /* Removed initial opacity 0 to prevent total black screen if JS fails */
   }
 
   h1, h2, h3, h4, h5, h6 {
