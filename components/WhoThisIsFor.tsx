@@ -8,22 +8,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const targetAudience = [
   {
-    image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/dd354785-097f-4d13-f00e-dab31d481d00/publicContain",
+    image: "/images/service-providers.jpg",
     heading: "Service Providers",
     body: "Plumbers, roofers, landscapers, electricians",
   },
   {
-    image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/3a894806-a8ed-4d85-e2dd-8eae081d1800/publicContain",
+    image: "/images/clinics.jpg",
     heading: "Clinics & Professional Practices",
     body: "Dental clinics, medical practices, accountants, legal offices",
   },
   {
-    image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e67d32bd-7bfa-49b0-0afe-c9767f660d00/public",
+    image: "/images/shops.jpg",
     heading: "Local Shops & Restaurants",
     body: "Cafes, bakeries, retail stores, restaurants, boutique shops",
   },
   {
-    image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/6fa2b01f-4607-4694-4b12-9c1a84bd8500/public",
+    image: "/images/professionals.jpg",
     heading: "Independent Professionals",
     body: "Consultants, freelancers, coaches, solo business owners",
   },
