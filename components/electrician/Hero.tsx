@@ -61,6 +61,18 @@ const Hero = () => {
 
   return (
     <section ref={sectionRef} className="relative pt-32 md:pt-40 pb-24 bg-[#080808] overflow-hidden min-h-screen">
+      <style>{`
+        .volt-cta-primary {
+          background-color: #f59e0b;
+          color: #080808;
+          border: 2px solid #f59e0b;
+          transition: background-color 200ms, color 200ms;
+        }
+        .volt-cta-primary:hover {
+          background-color: transparent;
+          color: #f59e0b;
+        }
+      `}</style>
       {/* Decorative Line */}
       <div
         ref={lineRef}
@@ -96,7 +108,7 @@ const Hero = () => {
             </p>
 
             <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-10">
-              <a href="#contact" className="bg-[var(--accent-color)] text-[#080808] font-bold py-4 px-9 rounded-[4px] hover:brightness-110 transition-all flex items-center gap-2">
+              <a href="#contact" className="volt-cta-primary py-4 px-9 rounded-[4px] font-bold flex items-center gap-2">
                 Get a Free Quote <span>→</span>
               </a>
               <a href="#projects" className="border border-[#2a2a2a] text-white py-4 px-9 rounded-[4px] hover:border-[var(--accent-color)] hover:text-[var(--accent-color)] transition-all">

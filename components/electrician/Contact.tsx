@@ -87,6 +87,16 @@ const Contact = () => {
           background-color: #111111;
           color: #ffffff;
         }
+        .volt-cta-submit {
+          background-color: #f59e0b;
+          color: #080808;
+          border: 2px solid #f59e0b;
+          transition: background-color 200ms, color 200ms;
+        }
+        .volt-cta-submit:hover {
+          background-color: transparent;
+          color: #f59e0b;
+        }
       `}</style>
 
       <div className="container-custom">
@@ -168,8 +178,8 @@ const Contact = () => {
                 <div ref={(el) => { formFieldsRef.current[5] = el; }}>
                   <button
                     type="submit"
-                    className="w-full font-bold text-[15px] rounded-[4px] hover:brightness-90 transition-all"
-                    style={{ backgroundColor: "#f59e0b", color: "#080808", padding: "16px", letterSpacing: "0.04em" }}
+                    className="volt-cta-submit w-full font-bold text-[15px] rounded-[4px]"
+                    style={{ padding: "16px", letterSpacing: "0.04em" }}
                   >
                     Request a Free Quote →
                   </button>
