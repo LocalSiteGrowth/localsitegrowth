@@ -13,7 +13,7 @@ const demoSites = [
     image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/25838e79-afe9-45f2-b3ef-fb998ef07200/publicContain",
     heading: "Plumbing Business Website",
     body: "Clean, trust-building layout designed to turn visitors into service calls. Perfect for local plumbing businesses looking to grow online.",
-    link: "#",
+    link: "/plumbing",
   },
   {
     image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/a181f1ec-cf95-4ff0-4712-f1dceca21b00/publicContain",
@@ -104,12 +104,21 @@ export default function DemoSites() {
                 <p className="text-secondary text-[14px] md:text-[15px] mb-8 leading-relaxed">
                   {site.body}
                 </p>
-                <Link
-                  href={site.link}
-                  className="btn-outline inline-block text-sm"
-                >
-                  Preview Demo Website
-                </Link>
+                {site.link === "#" ? (
+                  <button
+                    className="btn-outline inline-block text-sm opacity-50 cursor-not-allowed"
+                    disabled
+                  >
+                    Coming Soon
+                  </button>
+                ) : (
+                  <Link
+                    href={site.link}
+                    className="btn-outline inline-block text-sm"
+                  >
+                    Preview Demo Website
+                  </Link>
+                )}
               </div>
             </div>
           ))}
