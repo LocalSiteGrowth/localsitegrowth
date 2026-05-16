@@ -32,7 +32,6 @@ const labelStyles: React.CSSProperties = {
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const numRef = useRef<HTMLDivElement>(null);
   const eyebrowRef = useRef<HTMLSpanElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const formFieldsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -41,11 +40,6 @@ const Contact = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      gsap.fromTo(numRef.current,
-        { opacity: 0 },
-        { opacity: 0.02, duration: 0.8, scrollTrigger: { trigger: sectionRef.current, start: "top 80%" } }
-      );
 
       gsap.fromTo(eyebrowRef.current,
         prefersReduced ? { opacity: 0 } : { x: -20, opacity: 0 },
@@ -81,8 +75,6 @@ const Contact = () => {
 
   return (
     <section id="contact" ref={sectionRef} className="relative overflow-hidden" style={{ backgroundColor: "#0f0f0f", paddingTop: "110px", paddingBottom: "110px" }}>
-      <div ref={numRef} className="absolute top-0 right-0 text-[200px] font-extrabold text-white pointer-events-none select-none leading-none" style={{ opacity: 0 }}>05</div>
-
       <div className="container-custom">
         <span ref={eyebrowRef} className="inline-block text-[11px] font-semibold tracking-[0.12em] uppercase text-[var(--accent-color)] mb-4">
           Get In Touch
@@ -112,7 +104,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 {[
                   { label: "Full Name", id: "name", type: "text", placeholder: "John Smith" },
-                  { label: "Phone Number", id: "phone", type: "tel", placeholder: "+64 21 000 0000" },
+                  { label: "Phone Number", id: "phone", type: "tel", placeholder: "+64 22 5707 467" },
                   { label: "Email Address", id: "email", type: "email", placeholder: "john@example.com" },
                 ].map((field, i) => (
                   <div key={field.id} ref={(el) => { formFieldsRef.current[i] = el; }}>
@@ -180,7 +172,7 @@ const Contact = () => {
           <div ref={rightColRef} className="flex flex-col gap-8">
             {/* Testimonial */}
             <div>
-              <div className="text-[var(--accent-color)] text-[120px] font-extrabold leading-none" style={{ opacity: 0.2, lineHeight: 0.8 }}>&ldquo;</div>
+              <div className="text-[var(--accent-color)] font-extrabold" style={{ fontSize: "120px", opacity: 0.2, lineHeight: 0.8 }}>&ldquo;</div>
               <p className="text-white text-lg italic leading-[1.6] mt-4">
                 Called Volt at 9pm with a switchboard fault. They were on site within an hour, had it fixed by midnight, and cleaned up before they left. Outstanding service.
               </p>
@@ -190,8 +182,8 @@ const Contact = () => {
             <div style={{ borderTop: "1px solid #1e1e1e", paddingTop: "32px" }} className="flex flex-col gap-6">
               <div>
                 <span className="block text-[var(--secondary-color)] text-[12px] uppercase tracking-widest mb-2">Call Us Anytime</span>
-                <a href="tel:+64210000000" className="text-white font-bold text-xl hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">
-                  +64 21 000 0000
+                <a href="tel:+64225707467" className="text-white font-bold text-xl hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">
+                  +64 22 5707 467
                 </a>
               </div>
               <div>

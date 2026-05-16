@@ -3,28 +3,30 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Home, Building2, Zap } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    icon: Home,
     tag: "Residential",
     name: "Full Home Rewire",
     desc: "Complete rewire of a 4-bedroom home including new switchboard, LED lighting throughout, and smoke alarm installation.",
+    image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Electrician working on residential wiring",
   },
   {
-    icon: Building2,
     tag: "Commercial",
     name: "Office Fit-Out",
     desc: "Full electrical fit-out for a 300sqm commercial office including data cabling, LED panels, and emergency lighting.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Modern commercial office interior",
   },
   {
-    icon: Zap,
     tag: "Emergency",
     name: "Switchboard Fault",
     desc: "Emergency response to a switchboard fault in a residential property — fault identified and resolved within 2 hours.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Electrical switchboard panel",
   },
 ];
 
@@ -86,12 +88,14 @@ const Projects = () => {
               className="project-card rounded-lg overflow-hidden transition-all duration-[250ms]"
               style={{ backgroundColor: "#111111", border: "1px solid #1e1e1e" }}
             >
-              {/* Icon block */}
-              <div
-                className="flex items-center justify-center"
-                style={{ height: "220px", background: "linear-gradient(135deg, #111111, #1a1a1a)" }}
-              >
-                <p.icon size={48} color="#f59e0b" strokeWidth={1.5} />
+              {/* Photo block */}
+              <div className="relative overflow-hidden group" style={{ height: "220px" }}>
+                <img
+                  src={p.image}
+                  alt={p.imageAlt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent opacity-60" />
               </div>
 
               {/* Content */}

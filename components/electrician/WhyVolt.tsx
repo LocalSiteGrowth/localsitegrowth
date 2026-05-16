@@ -15,7 +15,6 @@ const points = [
 
 const WhyVolt = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const numRef = useRef<HTMLDivElement>(null);
   const eyebrowRef = useRef<HTMLSpanElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const pointsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -23,11 +22,6 @@ const WhyVolt = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      gsap.fromTo(numRef.current,
-        { opacity: 0 },
-        { opacity: 0.02, duration: 0.8, scrollTrigger: { trigger: sectionRef.current, start: "top 80%" } }
-      );
 
       gsap.fromTo(eyebrowRef.current,
         prefersReduced ? { opacity: 0 } : { x: -20, opacity: 0 },
@@ -53,8 +47,6 @@ const WhyVolt = () => {
 
   return (
     <section id="why-volt" ref={sectionRef} className="relative overflow-hidden" style={{ backgroundColor: "#080808", paddingTop: "110px", paddingBottom: "110px" }}>
-      <div ref={numRef} className="absolute top-0 right-0 text-[200px] font-extrabold text-white pointer-events-none select-none leading-none" style={{ opacity: 0 }}>04</div>
-
       <div className="container-custom">
         <span ref={eyebrowRef} className="inline-block text-[11px] font-semibold tracking-[0.12em] uppercase text-[var(--accent-color)] mb-4">
           Why Volt
@@ -68,19 +60,14 @@ const WhyVolt = () => {
             <div
               key={i}
               ref={(el) => { pointsRef.current[i] = el; }}
-              className="relative px-0 lg:px-10 py-8 lg:py-0 first:pl-0 last:pr-0"
-              style={{ borderRight: i < 3 ? "1px solid #1e1e1e" : "none" }}
+              className="py-8 lg:py-0"
+              style={{ borderRight: i < 3 ? "1px solid #1e1e1e" : "none", paddingRight: i < 3 ? "2.5rem" : "0", paddingLeft: i > 0 ? "2.5rem" : "0" }}
             >
-              <div className={i > 0 ? "lg:pl-10" : ""}>
-                <span
-                  className="text-[var(--accent-color)] text-5xl font-extrabold block mb-4"
-                  style={{ opacity: 0.4 }}
-                >
-                  {p.num}
-                </span>
-                <h3 className="text-white font-semibold text-lg mb-3">{p.heading}</h3>
-                <p className="text-[var(--secondary-color)] text-[15px] leading-[1.7]">{p.body}</p>
-              </div>
+              <span className="text-[var(--accent-color)] text-5xl font-extrabold block mb-4" style={{ opacity: 0.4 }}>
+                {p.num}
+              </span>
+              <h3 className="text-white font-semibold text-lg mb-3">{p.heading}</h3>
+              <p className="text-[var(--secondary-color)] text-[15px] leading-[1.7]">{p.body}</p>
             </div>
           ))}
         </div>

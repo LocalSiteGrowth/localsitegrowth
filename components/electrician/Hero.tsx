@@ -6,21 +6,15 @@ import gsap from "gsap";
 const Hero = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
-  const numRef = useRef<HTMLDivElement>(null);
   const eyebrowRef = useRef<HTMLSpanElement>(null);
   const h1Ref = useRef<HTMLHeadingElement>(null);
   const subtextRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Decorative "01"
-      gsap.fromTo(numRef.current, 
-        { opacity: 0 }, 
-        { opacity: 0.03, duration: 1.2, delay: 0.5 }
-      );
-
       // Amber line
       gsap.fromTo(lineRef.current,
         { width: 0 },
@@ -55,88 +49,91 @@ const Hero = () => {
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, delay: 1.3, stagger: 0.08 }
       );
+
+      gsap.fromTo(imgRef.current,
+        { opacity: 0, x: 40 },
+        { opacity: 1, x: 0, duration: 0.9, delay: 0.5, ease: "power2.out" }
+      );
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative pt-32 md:pt-48 pb-0 bg-[#080808] overflow-hidden min-h-screen">
+    <section ref={sectionRef} className="relative pt-32 md:pt-40 pb-24 bg-[#080808] overflow-hidden min-h-screen">
       {/* Decorative Line */}
-      <div 
+      <div
         ref={lineRef}
         className="absolute top-[20%] left-0 h-[1px] bg-[var(--accent-color)] opacity-15"
       />
 
-      {/* Decorative Number */}
-      <div 
-        ref={numRef}
-        className="absolute top-10 right-10 md:top-20 md:right-20 text-[200px] md:text-[300px] font-extrabold text-white pointer-events-none select-none leading-none"
-        style={{ opacity: 0 }}
-      >
-        01
-      </div>
+      <div className="container-custom relative z-10 h-full flex flex-col justify-center">
+        {/* Two-column layout: content left, image right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-      <div className="container-custom relative z-10">
-        <div className="max-w-[800px]">
-          <span 
-            ref={eyebrowRef}
-            className="inline-block text-[11px] font-semibold tracking-[0.12em] uppercase text-[var(--accent-color)] mb-6"
-          >
-            Licensed Electricians · Residential & Commercial
-          </span>
+          {/* Left — content */}
+          <div>
+            <span
+              ref={eyebrowRef}
+              className="inline-block text-[11px] font-semibold tracking-[0.12em] uppercase text-[var(--accent-color)] mb-6"
+            >
+              Licensed Electricians · Residential & Commercial
+            </span>
 
-          <h1 ref={h1Ref} className="flex flex-col gap-2">
-            <span className="h1-line text-[48px] md:text-[72px] font-extrabold text-white leading-tight">Wired For</span>
-            <span className="h1-line text-[48px] md:text-[72px] font-extrabold text-[var(--accent-color)] leading-tight">Precision.</span>
-            <span className="h1-line text-[28px] md:text-[40px] font-light text-white tracking-tight mt-2">Powered By Pride.</span>
-          </h1>
+            <h1 ref={h1Ref} className="flex flex-col gap-1">
+              <span className="h1-line text-[48px] md:text-[64px] font-extrabold text-white leading-tight">Wired For</span>
+              <span className="h1-line text-[48px] md:text-[64px] font-extrabold text-[var(--accent-color)] leading-tight">Precision.</span>
+              <span className="h1-line text-[28px] md:text-[36px] font-light text-white tracking-tight mt-2">Powered By Pride.</span>
+            </h1>
 
-          <p 
-            ref={subtextRef}
-            className="text-[var(--secondary-color)] text-base md:text-lg max-w-[560px] leading-relaxed mt-8"
-          >
-            Professional electrical services delivered with precision and care. 
-            Residential, commercial, and emergency work across the region — every job done to the highest standard.
-          </p>
+            <p
+              ref={subtextRef}
+              className="text-[var(--secondary-color)] text-base leading-[1.75] max-w-[500px] mt-8"
+            >
+              Professional electrical services delivered with precision and care.
+              Residential, commercial, and emergency work across the region — every job done to the highest standard.
+            </p>
 
-          <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-10">
-            <button className="bg-[var(--accent-color)] text-[#080808] font-bold py-4 px-9 rounded-[4px] hover:brightness-110 transition-all flex items-center gap-2">
-              Get a Free Quote <span>→</span>
-            </button>
-            <button className="border border-[#2a2a2a] text-white py-4 px-9 rounded-[4px] hover:border-[var(--accent-color)] hover:text-[var(--accent-color)] transition-all">
-              View Our Work
-            </button>
+            <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-10">
+              <a href="#contact" className="bg-[var(--accent-color)] text-[#080808] font-bold py-4 px-9 rounded-[4px] hover:brightness-110 transition-all flex items-center gap-2">
+                Get a Free Quote <span>→</span>
+              </a>
+              <a href="#projects" className="border border-[#2a2a2a] text-white py-4 px-9 rounded-[4px] hover:border-[var(--accent-color)] hover:text-[var(--accent-color)] transition-all">
+                View Our Work
+              </a>
+            </div>
+
+            <div ref={statsRef} className="flex flex-wrap items-center gap-6 md:gap-10 mt-14">
+              <div className="flex flex-col gap-1">
+                <span className="text-white text-xl font-bold">10+ Years</span>
+                <span className="text-[var(--secondary-color)] text-[12px] uppercase tracking-wider">In Business</span>
+              </div>
+              <div className="h-10 w-[1px] bg-[#1e1e1e]" />
+              <div className="flex flex-col gap-1">
+                <span className="text-white text-xl font-bold">1,200+</span>
+                <span className="text-[var(--secondary-color)] text-[12px] uppercase tracking-wider">Jobs Completed</span>
+              </div>
+              <div className="h-10 w-[1px] bg-[#1e1e1e]" />
+              <div className="flex flex-col gap-1">
+                <span className="text-white text-xl font-bold">24/7</span>
+                <span className="text-[var(--secondary-color)] text-[12px] uppercase tracking-wider">Emergency Cover</span>
+              </div>
+            </div>
           </div>
 
-          <div ref={statsRef} className="flex items-center gap-6 md:gap-10 mt-16 pb-20">
-            <div className="flex flex-col gap-1">
-              <span className="text-white text-xl md:text-2xl font-bold">10+ Years</span>
-              <span className="text-[var(--secondary-color)] text-[12px] uppercase tracking-wider">In Business</span>
-            </div>
-            <div className="h-10 w-[1px] bg-[#1e1e1e]" />
-            <div className="flex flex-col gap-1">
-              <span className="text-white text-xl md:text-2xl font-bold">1,200+</span>
-              <span className="text-[var(--secondary-color)] text-[12px] uppercase tracking-wider">Jobs Completed</span>
-            </div>
-            <div className="h-10 w-[1px] bg-[#1e1e1e]" />
-            <div className="flex flex-col gap-1">
-              <span className="text-white text-xl md:text-2xl font-bold">24/7</span>
-              <span className="text-[var(--secondary-color)] text-[12px] uppercase tracking-wider">Emergency Cover</span>
-            </div>
+          {/* Right — hero image */}
+          <div ref={imgRef} className="relative rounded-2xl overflow-hidden group" style={{ height: "560px" }}>
+            {/* Amber tint overlay */}
+            <div className="absolute inset-0 bg-[var(--accent-color)] opacity-[0.05] z-10 pointer-events-none" />
+            {/* Dark top blend */}
+            <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-[#080808] to-transparent z-10 pointer-events-none" />
+            <img
+              src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/a181f1ec-cf95-4ff0-4712-f1dceca21b00/publicContain"
+              alt="Electrical Work"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+            />
           </div>
         </div>
-      </div>
-
-      {/* Hero Image */}
-      <div className="relative w-full h-[300px] md:h-[500px]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#080808] via-transparent to-transparent opacity-40 z-10" />
-        <div className="absolute inset-0 bg-[var(--accent-color)] opacity-[0.05] z-10" />
-        <img 
-          src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/a181f1ec-cf95-4ff0-4712-f1dceca21b00/publicContain"
-          alt="Electrical Work"
-          className="w-full h-full object-cover grayscale-[20%]"
-        />
       </div>
     </section>
   );

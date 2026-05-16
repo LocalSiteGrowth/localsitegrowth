@@ -17,7 +17,6 @@ const services = [
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const numRef = useRef<HTMLDivElement>(null);
   const eyebrowRef = useRef<HTMLSpanElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const subtextRef = useRef<HTMLParagraphElement>(null);
@@ -26,11 +25,6 @@ const Services = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      gsap.fromTo(numRef.current,
-        { opacity: 0 },
-        { opacity: 0.02, duration: 0.8, scrollTrigger: { trigger: sectionRef.current, start: "top 80%" } }
-      );
 
       gsap.fromTo(eyebrowRef.current,
         prefersReduced ? { opacity: 0 } : { x: -20, opacity: 0 },
@@ -61,8 +55,6 @@ const Services = () => {
 
   return (
     <section id="services" ref={sectionRef} className="relative overflow-hidden" style={{ backgroundColor: "#080808", paddingTop: "110px", paddingBottom: "110px" }}>
-      <div ref={numRef} className="absolute top-0 right-0 text-[200px] font-extrabold text-white pointer-events-none select-none leading-none" style={{ opacity: 0 }}>02</div>
-
       <div className="container-custom">
         {/* Header row */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
