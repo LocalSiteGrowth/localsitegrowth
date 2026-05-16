@@ -7,18 +7,6 @@ import { CheckCircle2 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const inputStyles: React.CSSProperties = {
-  width: "100%",
-  backgroundColor: "#111111",
-  border: "1px solid #1e1e1e",
-  borderRadius: "4px",
-  color: "#ffffff",
-  fontSize: "15px",
-  padding: "12px 16px",
-  outline: "none",
-  transition: "border-color 0.2s",
-};
-
 const labelStyles: React.CSSProperties = {
   display: "block",
   color: "#9ca3af",
@@ -75,6 +63,32 @@ const Contact = () => {
 
   return (
     <section id="contact" ref={sectionRef} className="relative overflow-hidden" style={{ backgroundColor: "#0f0f0f", paddingTop: "110px", paddingBottom: "110px" }}>
+      <style>{`
+        .volt-input {
+          width: 100%;
+          background-color: #111111;
+          border: 1px solid #1e1e1e;
+          border-radius: 4px;
+          color: #ffffff;
+          font-size: 15px;
+          padding: 12px 16px;
+          outline: none;
+          transition: border-color 0.2s;
+          font-family: inherit;
+        }
+        .volt-input:hover,
+        .volt-input:focus {
+          border-color: #f59e0b;
+        }
+        .volt-input::placeholder {
+          color: #3a3a3a;
+        }
+        .volt-input option {
+          background-color: #111111;
+          color: #ffffff;
+        }
+      `}</style>
+
       <div className="container-custom">
         <span ref={eyebrowRef} className="inline-block text-[11px] font-semibold tracking-[0.12em] uppercase text-[var(--accent-color)] mb-4">
           Get In Touch
@@ -114,9 +128,7 @@ const Contact = () => {
                       id={field.id}
                       required
                       placeholder={field.placeholder}
-                      style={inputStyles}
-                      onFocus={(e) => { e.target.style.borderColor = "#f59e0b"; }}
-                      onBlur={(e) => { e.target.style.borderColor = "#1e1e1e"; }}
+                      className="volt-input"
                     />
                   </div>
                 ))}
@@ -127,9 +139,8 @@ const Contact = () => {
                     id="service"
                     required
                     defaultValue=""
-                    style={{ ...inputStyles, appearance: "none" }}
-                    onFocus={(e) => { e.target.style.borderColor = "#f59e0b"; }}
-                    onBlur={(e) => { e.target.style.borderColor = "#1e1e1e"; }}
+                    className="volt-input"
+                    style={{ appearance: "none" }}
                   >
                     <option value="" disabled>Select a service</option>
                     <option>Residential Wiring</option>
@@ -149,9 +160,8 @@ const Contact = () => {
                     rows={4}
                     required
                     placeholder="Tell us what you need..."
-                    style={{ ...inputStyles, resize: "vertical" }}
-                    onFocus={(e) => { e.target.style.borderColor = "#f59e0b"; }}
-                    onBlur={(e) => { e.target.style.borderColor = "#1e1e1e"; }}
+                    className="volt-input"
+                    style={{ resize: "vertical" }}
                   />
                 </div>
 
