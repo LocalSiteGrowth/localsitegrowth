@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const demoSites = [
   {
-    image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/25838e79-afe9-45f2-b3ef-fb998ef07200/publicContain",
+    image: "/images/plumbing/about.png",
     heading: "Plumbing Business Website",
     body: "Clean, trust-building layout designed to turn visitors into service calls. Perfect for local plumbing businesses looking to grow online.",
     link: "/plumbing",
