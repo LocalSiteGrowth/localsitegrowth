@@ -83,7 +83,7 @@ const Hero = () => {
             <h1 ref={h1Ref} className="flex flex-col gap-1">
               <span className="h1-line text-[48px] md:text-[64px] font-extrabold text-white leading-tight">Wired For</span>
               <span className="h1-line text-[48px] md:text-[64px] font-extrabold text-[var(--accent-color)] leading-tight">Precision.</span>
-              <span className="h1-line text-[28px] md:text-[36px] font-light text-white tracking-tight mt-2">Powered By Pride.</span>
+              <span className="h1-line text-[28px] md:text-[36px] font-light text-white tracking-tight mt-2">Powered By Expertise.</span>
             </h1>
 
             <p
