@@ -40,8 +40,8 @@ const services = [
   {
     title: "Emergency Callouts",
     desc: "24 hour emergency electrical service for urgent faults and safety hazards.",
-    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Technician working on urgent electrical fault at night",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Electrician urgently fixing an electrical fault",
   },
 ];
 
