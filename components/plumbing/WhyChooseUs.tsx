@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -44,54 +43,136 @@ const WhyChooseUs = () => {
         scrollTrigger: {
           trigger: ".why-heading",
           start: "top 85%",
+          toggleActions: "play none none none",
         },
       });
 
-      gsap.from(cardsRef.current, {
-        y: 50,
-        opacity: 0,
-        duration: 0.7,
-        stagger: 0.12,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
+      cardsRef.current.forEach((card, index) => {
+        if (!card) return;
+        gsap.fromTo(
+          card,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
+            delay: index * 0.12,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 90%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
       });
     }, sectionRef);
-
     return () => ctx.revert();
   }, []);
 
   return (
-    <section 
-      id="why-us" 
+    <section
+      id="why-us"
       ref={sectionRef}
-      className="bg-[var(--bg-color)] section-padding border-t border-[var(--border-color)]"
+      style={{
+        backgroundColor: "var(--bg-color)",
+        borderTop: "1px solid #1e1e1e",
+        paddingTop: "100px",
+        paddingBottom: "100px",
+      }}
     >
       <div className="container-custom">
-        <div className="text-center max-w-2xl mx-auto mb-16 why-heading">
+
+        {/* Heading */}
+        <div
+          className="why-heading"
+          style={{
+            textAlign: "center",
+            maxWidth: "640px",
+            margin: "0 auto 64px auto",
+          }}
+        >
           <span className="eyebrow tracking-[0.15em]">Our Promise</span>
-          <h2 className="section-heading font-serif">Excellence in Every Detail.</h2>
+          <h2 className="section-heading font-serif">
+            Excellence in Every Detail.
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {/* 2x2 card grid — inline styles to guarantee layout */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "24px",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}
+        >
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              ref={(el) => { cardsRef.current[index] = el; }}
-              className="card-base group"
+              ref={(el) => {
+                cardsRef.current[index] = el;
+              }}
+              style={{
+                backgroundColor: "#111111",
+                border: "1px solid #1e1e1e",
+                borderRadius: "12px",
+                padding: "32px",
+              }}
             >
-              <div className="w-12 h-12 bg-accent-color/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-color/20 transition-colors border border-[var(--border-color)]">
-                <benefit.icon className="text-[var(--accent-color)]" size={24} strokeWidth={1.5} />
+              <div
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  borderRadius: "50%",
+                  backgroundColor: "rgba(245, 158, 11, 0.1)",
+                  border: "1px solid #1e1e1e",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: "20px",
+                }}
+              >
+                <benefit.icon
+                  size={22}
+                  strokeWidth={1.5}
+                  style={{ color: "#f59e0b" }}
+                />
               </div>
-              <h3 className="text-white text-lg font-serif font-semibold mb-3 tracking-wide">{benefit.title}</h3>
-              <p className="text-secondary text-sm leading-relaxed font-light">
+              <h3
+                style={{
+                  color: "#ffffff",
+                  fontSize: "17px",
+                  fontWeight: 600,
+                  marginBottom: "10px",
+                }}
+              >
+                {benefit.title}
+              </h3>
+              <p
+                style={{
+                  color: "#9ca3af",
+                  fontSize: "14px",
+                  lineHeight: "1.65",
+                  margin: 0,
+                }}
+              >
                 {benefit.description}
               </p>
             </div>
           ))}
         </div>
+
+        {/* Mobile override */}
+        <style>{`
+          @media (max-width: 640px) {
+            .why-grid {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        `}</style>
+
       </div>
     </section>
   );
