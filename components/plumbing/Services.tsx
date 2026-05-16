@@ -1,16 +1,8 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { 
-  Droplets, 
-  AlertTriangle, 
-  Home, 
-  Flame, 
-  Building, 
-  ShieldCheck 
-} from "lucide-react";
+import { Droplets, AlertTriangle, Home, Flame } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,7 +35,6 @@ const Services = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Heading animation
       gsap.from(".services-heading", {
         y: 40,
         opacity: 0,
@@ -55,8 +46,6 @@ const Services = () => {
           toggleActions: "play none none none",
         },
       });
-
-      // Cards staggered animation
       gsap.from(cardsRef.current, {
         y: 50,
         opacity: 0,
@@ -70,7 +59,6 @@ const Services = () => {
         },
       });
     }, sectionRef);
-
     return () => ctx.revert();
   }, []);
 
@@ -82,48 +70,127 @@ const Services = () => {
     >
       <div className="container-custom">
 
-        {/* Top row — eyebrow and heading */}
-        <div className="services-heading mb-12">
+        {/* Heading row — full width */}
+        <div className="services-heading mb-16">
           <span className="eyebrow tracking-[0.15em]">Premium Services</span>
-          <h2 className="section-heading font-serif">Unmatched Expertise for Every Need</h2>
-          <p className="text-secondary text-lg font-light max-w-2xl">
-            From bespoke bathroom installations to urgent commercial repairs, we bring an uncompromising level of quality to every project.
+          <h2 className="section-heading font-serif mt-2">
+            Unmatched Expertise for Every Need
+          </h2>
+          <p className="text-secondary text-lg font-light max-w-2xl mt-4">
+            From bespoke bathroom installations to urgent commercial repairs,
+            we bring an uncompromising level of quality to every project.
           </p>
         </div>
 
-        {/* Bottom row — image left, cards right */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-
-          {/* Left — image only */}
-          <div className="relative w-full rounded-2xl overflow-hidden border border-[var(--border-color)] group shadow-2xl"
-            style={{ height: '480px' }}>
+        {/* Content row — image left, cards right */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "48px",
+            alignItems: "start",
+          }}
+        >
+          {/* Left — image */}
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "480px",
+              borderRadius: "16px",
+              overflow: "hidden",
+              border: "1px solid #1e1e1e",
+            }}
+          >
             <img
               src="/images/plumbing/services.png"
-              alt="Luxury rainfall showerhead"
-              className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+              alt="Premium plumbing installation"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
             />
           </div>
 
-          {/* Right — four cards in fixed 2x2 grid */}
-          <div className="grid grid-cols-2 gap-6">
+          {/* Right — 2x2 cards */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "24px",
+            }}
+          >
             {services.map((service, index) => (
               <div
                 key={index}
-                ref={(el) => { cardsRef.current[index] = el; }}
-                className="card-base group"
+                ref={(el) => {
+                  cardsRef.current[index] = el;
+                }}
+                style={{
+                  backgroundColor: "#111111",
+                  border: "1px solid #1e1e1e",
+                  borderRadius: "12px",
+                  padding: "28px",
+                }}
               >
-                <div className="w-12 h-12 bg-accent-color/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-color/20 transition-colors border border-[var(--border-color)]">
-                  <service.icon className="text-[var(--accent-color)]" size={24} strokeWidth={1.5} />
+                <div
+                  style={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(245, 158, 11, 0.1)",
+                    border: "1px solid #1e1e1e",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "20px",
+                  }}
+                >
+                  <service.icon
+                    size={22}
+                    strokeWidth={1.5}
+                    style={{ color: "#f59e0b" }}
+                  />
                 </div>
-                <h3 className="text-white text-lg font-serif font-semibold mb-3 tracking-wide">{service.title}</h3>
-                <p className="text-secondary text-sm leading-relaxed font-light">
+                <h3
+                  style={{
+                    color: "#ffffff",
+                    fontSize: "17px",
+                    fontWeight: 600,
+                    marginBottom: "10px",
+                  }}
+                >
+                  {service.title}
+                </h3>
+                <p
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                    lineHeight: "1.65",
+                  }}
+                >
                   {service.description}
                 </p>
               </div>
             ))}
           </div>
-
         </div>
+
+        {/* Mobile layout override */}
+        <style>{`
+          @media (max-width: 768px) {
+            .services-grid {
+              grid-template-columns: 1fr !important;
+            }
+            .services-cards {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        `}</style>
+
       </div>
     </section>
   );
