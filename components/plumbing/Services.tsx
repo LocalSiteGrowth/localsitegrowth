@@ -81,24 +81,24 @@ const Services = () => {
       className="bg-[var(--bg-color)] section-padding"
     >
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          <div className="services-heading flex flex-col h-full">
+          <div className="services-heading">
             <span className="eyebrow tracking-[0.15em]">Premium Services</span>
             <h2 className="section-heading font-serif">Unmatched Expertise for Every Need</h2>
             <p className="text-secondary text-lg mb-8 font-light max-w-md">
               From bespoke bathroom installations to urgent commercial repairs, we bring an uncompromising level of quality to every project.
             </p>
-            <div className="relative flex-1 w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-color)] group min-h-[300px]">
+            <div className="relative h-[440px] w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-color)] group">
               <img 
                 src="/images/plumbing/services.png"
                 alt="Luxury rainfall showerhead"
-                className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
               />
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 h-full content-center">
+          <div className="grid sm:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
