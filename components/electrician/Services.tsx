@@ -10,26 +10,26 @@ const services = [
   {
     title: "Residential Wiring",
     desc: "New builds, renovations, rewiring, and all residential electrical work.",
-    image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Electrician working on residential wiring",
+    image: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Electrician installing wiring in a wall cavity",
   },
   {
     title: "Switchboard Upgrades",
     desc: "Full switchboard replacements and upgrades to meet current safety standards.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Electrical switchboard panel being upgraded",
+    image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Modern electrical switchboard upgrade",
   },
   {
     title: "LED Lighting",
     desc: "Design and installation of energy-efficient LED lighting for homes and businesses.",
-    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Modern LED lighting installation",
+    image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Modern interior with premium LED lighting",
   },
   {
     title: "Commercial Electrical",
     desc: "Fit-outs, maintenance, and compliance testing for commercial properties.",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Commercial electrical fit-out",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Commercial electrical installation in progress",
   },
   {
     title: "Solar & EV Charging",
@@ -40,8 +40,8 @@ const services = [
   {
     title: "Emergency Callouts",
     desc: "24 hour emergency electrical service for urgent faults and safety hazards.",
-    image: "https://images.unsplash.com/photo-1590534247854-e97d5e3feef6?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Emergency electrician at work",
+    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Emergency electrician responding to urgent fault",
   },
 ];
 
