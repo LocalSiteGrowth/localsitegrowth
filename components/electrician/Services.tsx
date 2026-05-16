@@ -28,8 +28,8 @@ const services = [
   {
     title: "Commercial Electrical",
     desc: "Fit-outs, maintenance, and compliance testing for commercial properties.",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Commercial electrical installation in progress",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Large commercial building electrical installation",
   },
   {
     title: "Solar & EV Charging",
@@ -40,8 +40,8 @@ const services = [
   {
     title: "Emergency Callouts",
     desc: "24 hour emergency electrical service for urgent faults and safety hazards.",
-    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Emergency electrician responding to urgent fault",
+    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Technician working on urgent electrical fault at night",
   },
 ];
 
