@@ -80,7 +80,7 @@ const Contact = () => {
               </p>
               <button 
                 onClick={() => setIsSubmitted(false)}
-                className="text-[var(--accent-color)] hover:opacity-80 transition-opacity mt-4 text-xs uppercase tracking-widest"
+                className="text-[var(--accent-color)] hover:opacity-80 transition-all duration-300 hover:scale-105 mt-4 text-xs uppercase tracking-widest"
               >
                 Submit another inquiry
               </button>
