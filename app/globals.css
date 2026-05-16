@@ -21,11 +21,11 @@
   }
 
   .plumbing-theme {
-    --bg-color: #040b16; /* Deep luxury navy */
-    --surface-color: #0a1324; /* Slightly lighter navy for cards */
-    --border-color: #1c2a42; /* Navy border */
+    --bg-color: #0a0a0a;
+    --surface-color: #111111;
+    --border-color: #1e1e1e;
     --accent-color: #d4af37; /* Metallic gold */
-    --secondary-color: #94a3b8; /* Cool gray for text */
+    --secondary-color: #a0aec0;
   }
 
   body {

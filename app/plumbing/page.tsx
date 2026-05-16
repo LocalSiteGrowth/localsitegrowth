@@ -39,57 +39,7 @@ export default function PlumbingDemo() {
       <Contact />
       <Footer />
 
-      <style jsx global>{`
-        .plumbing-theme {
-          --color-accent: #2563eb;
-          --accent: #2563eb;
-        }
-        
-        .plumbing-theme .btn-primary {
-          background-color: #2563eb !important;
-        }
-        
-        .plumbing-theme .text-accent {
-          color: #2563eb !important;
-        }
 
-        .plumbing-theme .bg-accent {
-          background-color: #2563eb !important;
-        }
-
-        .plumbing-theme .border-accent {
-          border-color: #2563eb !important;
-        }
-
-        .plumbing-theme .eyebrow {
-          font-size: 12px;
-          color: #2563eb;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          display: inline-block;
-          margin-bottom: 1rem;
-        }
-
-        .plumbing-theme .section-heading {
-          font-size: clamp(32px, 5vw, 40px);
-          font-weight: 700;
-          color: #ffffff;
-          margin-bottom: 1.5rem;
-        }
-
-        .plumbing-theme .hero-vignette::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 30%;
-          background: linear-gradient(to top, #0a0a0a, transparent);
-          border-radius: 0 0 16px 16px;
-          pointer-events: none;
-        }
-      `}</style>
     </main>
   );
 }

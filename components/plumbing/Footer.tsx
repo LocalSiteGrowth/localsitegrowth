@@ -8,10 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-10">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-transparent border border-[var(--accent-color)] rounded-full flex items-center justify-center">
-              <Droplets size={20} className="text-[var(--accent-color)]" strokeWidth={1.5} />
-            </div>
-            <span className="text-2xl font-serif text-white tracking-wide">
+            <span className="text-2xl font-serif text-white tracking-wide group-hover:scale-105 transition-transform">
               Flow <span className="text-[var(--accent-color)] italic">Estates</span>
             </span>
           </Link>
