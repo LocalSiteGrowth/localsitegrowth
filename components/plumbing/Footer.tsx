@@ -15,15 +15,15 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex items-center gap-8">
-            <Link href="#services" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] transition-colors">Services</Link>
-            <Link href="#about" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] transition-colors">About</Link>
-            <Link href="#why-us" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] transition-colors">Why Us</Link>
-            <Link href="#contact" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] transition-colors">Contact</Link>
+            <Link href="#services" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">Services</Link>
+            <Link href="#about" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">About</Link>
+            <Link href="#why-us" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">Why Us</Link>
+            <Link href="#contact" className="text-secondary text-[12px] uppercase tracking-widest hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">Contact</Link>
           </div>
 
           {/* Contact */}
           <div>
-            <a href="tel:+64225707467" className="text-secondary text-lg font-serif hover:text-[var(--accent-color)] transition-colors">
+            <a href="tel:+64225707467" className="text-secondary text-lg font-serif hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">
               +64 22 5707 467
             </a>
           </div>

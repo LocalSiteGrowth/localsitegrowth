@@ -48,7 +48,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[13px] uppercase tracking-widest font-medium text-secondary hover:text-[var(--accent-color)] transition-colors"
+                className="text-[13px] uppercase tracking-widest font-medium text-secondary hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300"
               >
                 {link.name}
               </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
           <div className="flex items-center gap-8 border-l border-[var(--border-color)] pl-8">
             <a
               href="tel:+64225707467"
-              className="flex items-center gap-2 text-[var(--accent-color)] hover:brightness-110 transition-all font-serif text-lg"
+              className="flex items-center gap-2 text-[var(--accent-color)] hover:brightness-110 hover:scale-105 transition-all duration-300 font-serif text-lg"
             >
               <Phone size={18} />
               <span>+64 22 5707 467</span>
@@ -86,7 +86,7 @@ const Navbar = () => {
       >
         <a
           href="tel:+64225707467"
-          className="flex items-center gap-3 text-[var(--accent-color)] text-2xl font-serif py-4 border-b border-[var(--border-color)]"
+          className="flex items-center gap-3 text-[var(--accent-color)] text-2xl font-serif py-4 border-b border-[var(--border-color)] hover:scale-105 transition-all duration-300 origin-left"
         >
           <Phone size={24} />
           <span>+64 22 5707 467</span>
@@ -96,7 +96,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-lg tracking-widest uppercase font-medium text-secondary hover:text-white"
+              className="text-lg tracking-widest uppercase font-medium text-secondary hover:text-white hover:scale-105 inline-block transition-all duration-300 origin-left"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}

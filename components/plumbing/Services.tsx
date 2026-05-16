@@ -93,6 +93,7 @@ const Services = () => {
         >
           {/* Left — image */}
           <div
+            className="group"
             style={{
               position: "relative",
               width: "100%",
@@ -105,6 +106,7 @@ const Services = () => {
             <img
               src="/images/plumbing/services.png"
               alt="Premium plumbing installation"
+              className="group-hover:scale-105 transition-transform duration-1000"
               style={{
                 position: "absolute",
                 inset: 0,
