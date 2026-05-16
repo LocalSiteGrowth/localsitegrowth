@@ -75,14 +75,15 @@ const Services = () => {
   }, []);
 
   return (
-    <section 
-      id="services" 
+    <section
+      id="services"
       ref={sectionRef}
       className="bg-[var(--bg-color)] section-padding"
     >
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
-          
+
+          {/* Left column — heading, text, image */}
           <div className="services-heading flex flex-col h-full">
             <span className="eyebrow tracking-[0.15em]">Premium Services</span>
             <h2 className="section-heading font-serif">Unmatched Expertise for Every Need</h2>
@@ -90,7 +91,7 @@ const Services = () => {
               From bespoke bathroom installations to urgent commercial repairs, we bring an uncompromising level of quality to every project.
             </p>
             <div className="relative flex-grow w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-color)] group min-h-[300px]">
-              <img 
+              <img
                 src="/images/plumbing/services.png"
                 alt="Luxury rainfall showerhead"
                 className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
@@ -98,24 +99,26 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 h-full">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              ref={(el) => { cardsRef.current[index] = el; }}
-              className="card-base group"
-            >
-              <div className="w-12 h-12 bg-accent-color/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-color/20 transition-colors border border-[var(--border-color)]">
-                <service.icon className="text-[var(--accent-color)]" size={24} strokeWidth={1.5} />
+          {/* Right column — four service cards */}
+          <div className="grid sm:grid-cols-2 gap-6 content-start">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                ref={(el) => { cardsRef.current[index] = el; }}
+                className="card-base group"
+              >
+                <div className="w-12 h-12 bg-accent-color/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-color/20 transition-colors border border-[var(--border-color)]">
+                  <service.icon className="text-[var(--accent-color)]" size={24} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-white text-lg font-serif font-semibold mb-3 tracking-wide">{service.title}</h3>
+                <p className="text-secondary text-sm leading-relaxed font-light">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-white text-lg font-serif font-semibold mb-3 tracking-wide">{service.title}</h3>
-              <p className="text-secondary text-sm leading-relaxed font-light">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+
         </div>
-      </div>
       </div>
     </section>
   );
