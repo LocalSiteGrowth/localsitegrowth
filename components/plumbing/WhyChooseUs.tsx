@@ -109,18 +109,20 @@ const WhyChooseUs = () => {
           }}
         >
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                cardsRef.current[index] = el;
-              }}
-              style={{
-                backgroundColor: "#111111",
-                border: "1px solid #1e1e1e",
-                borderRadius: "12px",
-                padding: "32px",
-              }}
-            >
+              <div
+                key={index}
+                ref={(el) => {
+                  cardsRef.current[index] = el;
+                }}
+                className="hover-gold-edge"
+                style={{
+                  backgroundColor: "#111111",
+                  border: "1px solid #1e1e1e",
+                  borderRadius: "12px",
+                  padding: "32px",
+                  transition: "border-color 0.3s ease",
+                }}
+              >
               <div
                 style={{
                   width: "48px",
@@ -164,12 +166,15 @@ const WhyChooseUs = () => {
           ))}
         </div>
 
-        {/* Mobile override */}
+        {/* Mobile override and hover styles */}
         <style>{`
           @media (max-width: 640px) {
             .why-grid {
               grid-template-columns: 1fr !important;
             }
+          }
+          .hover-gold-edge:hover {
+            border-color: var(--accent-color) !important;
           }
         `}</style>
 

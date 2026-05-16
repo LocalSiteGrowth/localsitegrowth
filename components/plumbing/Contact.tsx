@@ -46,7 +46,7 @@ const Contact = () => {
     // In a real app, you'd send data to an API here
   };
 
-  const inputStyles = "w-full bg-[var(--surface-color)] border-b border-[var(--border-color)] px-4 py-4 text-white text-[15px] placeholder-secondary/50 focus:border-[var(--accent-color)] focus:outline-none transition-colors rounded-t-lg bg-opacity-50 backdrop-blur-sm";
+  const inputStyles = "w-full bg-[var(--surface-color)] border-b border-[var(--border-color)] px-4 py-4 text-white text-[15px] placeholder-secondary/50 focus:border-[var(--accent-color)] hover:border-[var(--accent-color)] focus:outline-none transition-colors duration-300 rounded-t-lg bg-opacity-50 backdrop-blur-sm";
   const labelStyles = "block text-secondary text-[12px] uppercase tracking-[0.1em] mb-2";
 
   return (
@@ -131,7 +131,7 @@ const Contact = () => {
 
         <div className="text-center mt-12">
           <p className="text-secondary text-xs tracking-widest uppercase mb-3">Direct Line</p>
-          <a href="tel:+64225707467" className="text-white text-2xl font-serif hover:text-[var(--accent-color)] transition-colors">
+          <a href="tel:+64225707467" className="text-white text-2xl font-serif hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">
             +64 22 5707 467
           </a>
         </div>

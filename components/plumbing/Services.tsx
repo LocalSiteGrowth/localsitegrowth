@@ -131,11 +131,13 @@ const Services = () => {
                 ref={(el) => {
                   cardsRef.current[index] = el;
                 }}
+                className="hover-gold-edge"
                 style={{
                   backgroundColor: "#111111",
                   border: "1px solid #1e1e1e",
                   borderRadius: "12px",
                   padding: "28px",
+                  transition: "border-color 0.3s ease",
                 }}
               >
                 <div
@@ -181,7 +183,7 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Mobile layout override */}
+        {/* Mobile layout override and hover styles */}
         <style>{`
           @media (max-width: 768px) {
             .services-grid {
@@ -190,6 +192,9 @@ const Services = () => {
             .services-cards {
               grid-template-columns: 1fr !important;
             }
+          }
+          .hover-gold-edge:hover {
+            border-color: var(--accent-color) !important;
           }
         `}</style>
 
