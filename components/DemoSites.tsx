@@ -14,7 +14,7 @@ const demoSites = [
     heading: "Plumbing Business Website",
     body: "Clean, trust-building layout designed to turn visitors into service calls. Perfect for local plumbing businesses looking to grow online.",
     link: "/plumbing",
-    objectPosition: "center 75%",
+    objectPosition: "center 25%",
   },
   {
     image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/a181f1ec-cf95-4ff0-4712-f1dceca21b00/publicContain",
