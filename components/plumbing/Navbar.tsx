@@ -56,11 +56,11 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-8 border-l border-[var(--border-color)] pl-8">
             <a
-              href="tel:+64210000000"
+              href="tel:+64225707467"
               className="flex items-center gap-2 text-[var(--accent-color)] hover:brightness-110 transition-all font-serif text-lg"
             >
               <Phone size={18} />
-              <span>+64 21 000 0000</span>
+              <span>+64 22 5707 467</span>
             </a>
             <Link href="#contact" className="btn-primary py-3 px-6 text-xs tracking-widest uppercase">
               Consultation
@@ -85,11 +85,11 @@ const Navbar = () => {
         )}
       >
         <a
-          href="tel:+64210000000"
+          href="tel:+64225707467"
           className="flex items-center gap-3 text-[var(--accent-color)] text-2xl font-serif py-4 border-b border-[var(--border-color)]"
         >
           <Phone size={24} />
-          <span>+64 21 000 0000</span>
+          <span>+64 22 5707 467</span>
         </a>
         <div className="flex flex-col gap-6">
           {navLinks.map((link) => (

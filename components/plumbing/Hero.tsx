@@ -85,13 +85,6 @@ const Hero = () => {
 
       <div className="container-custom grid lg:grid-cols-2 items-center gap-12 lg:gap-20">
         <div className="relative z-10">
-          <span 
-            ref={eyebrowRef}
-            className="eyebrow block tracking-[0.15em]"
-          >
-            Premium Plumbing Excellence
-          </span>
-          
           <h1 
             ref={h1Ref}
             className="text-[48px] md:text-[58px] lg:text-[72px] font-extrabold text-white leading-[1.05] mb-6 flex flex-col font-serif"
@@ -122,11 +115,11 @@ const Hero = () => {
           ref={imageRef}
           className="relative lg:h-[600px] w-full"
         >
-          <div className="hero-vignette relative h-full w-full rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-2xl border border-[var(--border-color)]">
+          <div className="hero-vignette group relative h-full w-full rounded-tl-[80px] rounded-br-[80px] rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-2xl border border-[var(--border-color)]">
             <img 
               src="/images/plumbing/hero.png"
               alt="Ultra-luxury modern bathroom with gold fixtures"
-              className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-700"
+              className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
             />
           </div>
         </div>

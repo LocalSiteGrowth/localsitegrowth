@@ -23,8 +23,8 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <a href="tel:+64210000000" className="text-secondary text-lg font-serif hover:text-[var(--accent-color)] transition-colors">
-              +64 21 000 0000
+            <a href="tel:+64225707467" className="text-secondary text-lg font-serif hover:text-[var(--accent-color)] transition-colors">
+              +64 22 5707 467
             </a>
           </div>
         </div>

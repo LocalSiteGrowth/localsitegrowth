@@ -94,7 +94,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="phone" className={labelStyles}>Phone Number</label>
-                  <input type="tel" id="phone" required placeholder="+64 21 000 0000" className={inputStyles} />
+                  <input type="tel" id="phone" required placeholder="+64 22 5707 467" className={inputStyles} />
                 </div>
               </div>
 
@@ -131,8 +131,8 @@ const Contact = () => {
 
         <div className="text-center mt-12">
           <p className="text-secondary text-xs tracking-widest uppercase mb-3">Direct Line</p>
-          <a href="tel:+64210000000" className="text-white text-2xl font-serif hover:text-[var(--accent-color)] transition-colors">
-            +64 21 000 0000
+          <a href="tel:+64225707467" className="text-white text-2xl font-serif hover:text-[var(--accent-color)] transition-colors">
+            +64 22 5707 467
           </a>
         </div>
       </div>

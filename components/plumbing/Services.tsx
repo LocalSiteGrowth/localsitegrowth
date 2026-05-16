@@ -99,11 +99,11 @@ const Services = () => {
             <p className="text-secondary text-lg mb-8 font-light max-w-md">
               From bespoke bathroom installations to urgent commercial repairs, we bring an uncompromising level of quality to every project.
             </p>
-            <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-color)]">
+            <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-color)] group">
               <img 
                 src="/images/plumbing/services.png"
                 alt="Luxury rainfall showerhead"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
               />
             </div>
           </div>

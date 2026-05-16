@@ -90,12 +90,12 @@ const About = () => {
             </div>
           </div>
 
-          <div className="about-image relative">
+          <div className="about-image relative group">
             <div className="w-full h-[500px] bg-[var(--bg-color)] rounded-tl-2xl rounded-br-2xl rounded-tr-[80px] rounded-bl-[80px] border border-[var(--border-color)] overflow-hidden shadow-2xl">
               <img 
                 src="/images/plumbing/about.png"
                 alt="Close-up of premium gold faucet craftsmanship"
-                className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-1000 hover:scale-105"
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
               />
             </div>
           </div>
