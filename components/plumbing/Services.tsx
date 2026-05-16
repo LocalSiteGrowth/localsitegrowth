@@ -81,26 +81,31 @@ const Services = () => {
       className="bg-[var(--bg-color)] section-padding"
     >
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
 
-          {/* Left column — heading, text, image */}
-          <div className="services-heading flex flex-col h-full">
-            <span className="eyebrow tracking-[0.15em]">Premium Services</span>
-            <h2 className="section-heading font-serif">Unmatched Expertise for Every Need</h2>
-            <p className="text-secondary text-lg mb-8 font-light max-w-md">
-              From bespoke bathroom installations to urgent commercial repairs, we bring an uncompromising level of quality to every project.
-            </p>
-            <div className="relative flex-grow w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-color)] group min-h-[300px]">
-              <img
-                src="/images/plumbing/services.png"
-                alt="Luxury rainfall showerhead"
-                className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
-              />
-            </div>
+        {/* Top row — eyebrow and heading */}
+        <div className="services-heading mb-12">
+          <span className="eyebrow tracking-[0.15em]">Premium Services</span>
+          <h2 className="section-heading font-serif">Unmatched Expertise for Every Need</h2>
+          <p className="text-secondary text-lg font-light max-w-2xl">
+            From bespoke bathroom installations to urgent commercial repairs, we bring an uncompromising level of quality to every project.
+          </p>
+        </div>
+
+        {/* Bottom row — image left, cards right */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          {/* Left — image only */}
+          <div className="relative w-full rounded-2xl overflow-hidden border border-[var(--border-color)] group shadow-2xl"
+            style={{ height: '480px' }}>
+            <img
+              src="/images/plumbing/services.png"
+              alt="Luxury rainfall showerhead"
+              className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+            />
           </div>
 
-          {/* Right column — four service cards */}
-          <div className="grid sm:grid-cols-2 gap-6 content-start">
+          {/* Right — four cards in fixed 2x2 grid */}
+          <div className="grid grid-cols-2 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
