@@ -67,12 +67,12 @@ const WhyChooseUs = () => {
     <section 
       id="why-us" 
       ref={sectionRef}
-      className="bg-[#0a0a0a] section-padding"
+      className="bg-[var(--bg-color)] section-padding border-t border-[var(--border-color)]"
     >
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto mb-16 why-heading">
-          <span className="eyebrow">Why Choose Us</span>
-          <h2 className="section-heading">Plumbing Done Properly.</h2>
+          <span className="eyebrow tracking-[0.15em]">Our Promise</span>
+          <h2 className="section-heading font-serif">Excellence in Every Detail.</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -82,11 +82,11 @@ const WhyChooseUs = () => {
               ref={(el) => { cardsRef.current[index] = el; }}
               className="card-base group"
             >
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                <benefit.icon className="text-accent" size={24} />
+              <div className="w-12 h-12 bg-accent-color/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-color/20 transition-colors border border-[var(--border-color)]">
+                <benefit.icon className="text-[var(--accent-color)]" size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="text-white text-lg font-bold mb-3">{benefit.title}</h3>
-              <p className="text-secondary text-sm leading-relaxed">
+              <h3 className="text-white text-lg font-serif font-semibold mb-3 tracking-wide">{benefit.title}</h3>
+              <p className="text-secondary text-sm leading-relaxed font-light">
                 {benefit.description}
               </p>
             </div>

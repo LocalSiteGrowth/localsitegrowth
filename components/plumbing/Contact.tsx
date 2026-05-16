@@ -46,42 +46,43 @@ const Contact = () => {
     // In a real app, you'd send data to an API here
   };
 
-  const inputStyles = "w-full bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white text-[15px] placeholder-[#4a4a4a] focus:border-accent focus:outline-none transition-colors";
-  const labelStyles = "block text-secondary text-[13px] font-medium mb-1.5";
+  const inputStyles = "w-full bg-[var(--surface-color)] border-b border-[var(--border-color)] px-4 py-4 text-white text-[15px] placeholder-secondary/50 focus:border-[var(--accent-color)] focus:outline-none transition-colors rounded-t-lg bg-opacity-50 backdrop-blur-sm";
+  const labelStyles = "block text-secondary text-[12px] uppercase tracking-[0.1em] mb-2";
 
   return (
     <section 
       id="contact" 
       ref={sectionRef}
-      className="bg-[#0a0a0a] section-padding"
+      className="bg-[var(--surface-color)] section-padding"
     >
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto mb-16 contact-heading">
-          <span className="eyebrow">Get In Touch</span>
-          <h2 className="section-heading">Get a Free Quote Today</h2>
-          <p className="text-secondary text-lg">
-            Fill out the form below and we'll get back to you within a few hours.
+          <span className="eyebrow tracking-[0.15em]">Private Consultations</span>
+          <h2 className="section-heading font-serif">Request a Consultation</h2>
+          <p className="text-secondary text-lg font-light">
+            Provide your project details below. Our specialists will contact you promptly to arrange an initial discussion.
           </p>
         </div>
 
         <div 
           ref={formRef}
-          className="max-w-[640px] mx-auto bg-[#111111] border border-border rounded-2xl p-6 md:p-12 shadow-2xl"
+          className="max-w-[640px] mx-auto bg-[var(--bg-color)] border border-[var(--border-color)] rounded-tl-2xl rounded-br-2xl p-8 md:p-14 shadow-2xl relative overflow-hidden"
         >
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-color)]/5 rounded-bl-[100px] pointer-events-none" />
           {isSubmitted ? (
             <div className="text-center py-12 flex flex-col items-center gap-4">
-              <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-2">
-                <CheckCircle2 size={32} className="text-green-500" />
+              <div className="w-16 h-16 bg-[var(--accent-color)]/10 rounded-full flex items-center justify-center mb-2 border border-[var(--border-color)]">
+                <CheckCircle2 size={32} className="text-[var(--accent-color)]" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
-              <p className="text-secondary">
-                Thanks — we'll be in touch shortly to discuss your plumbing requirements.
+              <h3 className="text-2xl font-serif font-semibold text-white">Inquiry Received</h3>
+              <p className="text-secondary font-light text-center">
+                Thank you for your interest. A representative will be in touch shortly to discuss your estate's plumbing requirements.
               </p>
               <button 
                 onClick={() => setIsSubmitted(false)}
-                className="text-accent hover:underline mt-4 text-sm"
+                className="text-[var(--accent-color)] hover:opacity-80 transition-opacity mt-4 text-xs uppercase tracking-widest"
               >
-                Send another message
+                Submit another inquiry
               </button>
             </div>
           ) : (
@@ -121,16 +122,16 @@ const Contact = () => {
                 <textarea id="message" rows={4} required placeholder="Tell us about what you need help with..." className={inputStyles}></textarea>
               </div>
 
-              <button type="submit" className="btn-primary w-full py-4 text-lg">
-                Request a Free Quote <MoveRight className="ml-2" />
+              <button type="submit" className="btn-primary w-full py-5 text-lg tracking-wide uppercase font-semibold text-[14px]">
+                Submit Request <MoveRight className="ml-3" size={18} />
               </button>
             </form>
           )}
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-secondary text-sm mb-2">Prefer to call?</p>
-          <a href="tel:+64210000000" className="text-white text-xl font-bold hover:text-accent transition-colors">
+          <p className="text-secondary text-xs tracking-widest uppercase mb-3">Direct Line</p>
+          <a href="tel:+64210000000" className="text-white text-2xl font-serif hover:text-[var(--accent-color)] transition-colors">
             +64 21 000 0000
           </a>
         </div>

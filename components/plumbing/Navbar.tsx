@@ -27,20 +27,20 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b",
         isScrolled
-          ? "bg-[#0f0f0f] border-[#1e1e1e] py-3"
-          : "bg-transparent border-transparent py-5"
+          ? "bg-[var(--bg-color)]/80 backdrop-blur-md border-[var(--border-color)] py-4 shadow-xl"
+          : "bg-transparent border-transparent py-6"
       )}
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Droplets size={18} className="text-white fill-current" />
+          <div className="w-10 h-10 bg-transparent border border-[var(--accent-color)] rounded-full flex items-center justify-center group-hover:scale-105 transition-transform">
+            <Droplets size={20} className="text-[var(--accent-color)]" strokeWidth={1.5} />
           </div>
-          <span className="text-xl font-extrabold text-white tracking-tight">
-            Flow <span className="text-accent">Plumbing</span>
+          <span className="text-2xl font-serif text-white tracking-wide">
+            Flow <span className="text-[var(--accent-color)] italic">Estates</span>
           </span>
         </Link>
 
@@ -51,22 +51,22 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[14px] font-medium text-secondary hover:text-white transition-colors"
+                className="text-[13px] uppercase tracking-widest font-medium text-secondary hover:text-[var(--accent-color)] transition-colors"
               >
                 {link.name}
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-6 border-l border-border pl-6">
+          <div className="flex items-center gap-8 border-l border-[var(--border-color)] pl-8">
             <a
               href="tel:+64210000000"
-              className="flex items-center gap-2 text-accent font-semibold hover:brightness-110 transition-all"
+              className="flex items-center gap-2 text-[var(--accent-color)] hover:brightness-110 transition-all font-serif text-lg"
             >
-              <Phone size={16} />
+              <Phone size={18} />
               <span>+64 21 000 0000</span>
             </a>
-            <Link href="#contact" className="btn-primary py-2 px-5 text-sm">
-              Get a Free Quote
+            <Link href="#contact" className="btn-primary py-3 px-6 text-xs tracking-widest uppercase">
+              Consultation
             </Link>
           </div>
         </div>
@@ -83,13 +83,13 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "fixed inset-0 top-[72px] bg-[#0f0f0f] z-40 md:hidden transition-transform duration-300 flex flex-col p-6 gap-8",
+          "fixed inset-0 top-[76px] bg-[var(--bg-color)] z-40 md:hidden transition-transform duration-500 flex flex-col p-6 gap-8",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         <a
           href="tel:+64210000000"
-          className="flex items-center gap-3 text-accent text-xl font-bold py-4 border-b border-border"
+          className="flex items-center gap-3 text-[var(--accent-color)] text-2xl font-serif py-4 border-b border-[var(--border-color)]"
         >
           <Phone size={24} />
           <span>+64 21 000 0000</span>
@@ -99,7 +99,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-lg font-medium text-secondary hover:text-white"
+              className="text-lg tracking-widest uppercase font-medium text-secondary hover:text-white"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -108,10 +108,10 @@ const Navbar = () => {
         </div>
         <Link
           href="#contact"
-          className="btn-primary w-full mt-auto mb-10 py-4 text-lg"
+          className="btn-primary w-full mt-auto mb-10 py-5 text-sm uppercase tracking-widest text-center"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          Get a Free Quote
+          Request Consultation
         </Link>
       </div>
     </nav>

@@ -62,20 +62,18 @@ const About = () => {
     <section 
       id="about" 
       ref={sectionRef}
-      className="bg-[#0f0f0f] section-padding"
+      className="bg-[var(--surface-color)] section-padding"
     >
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="about-content">
-            <span className="eyebrow">About Us</span>
-            <h2 className="section-heading">Local Plumbers. Proper Service.</h2>
-            <p className="text-secondary text-lg mb-8 leading-relaxed">
-              Flow Plumbing Services has been keeping homes and businesses running smoothly for over a decade. 
-              We're a local team that takes pride in our work — showing up on time, communicating clearly, 
-              and leaving every job cleaner than we found it.
+            <span className="eyebrow tracking-[0.15em]">The Gold Standard</span>
+            <h2 className="section-heading font-serif">Craftsmanship Refined.</h2>
+            <p className="text-secondary text-lg mb-8 leading-relaxed font-light">
+              We elevate ordinary plumbing to an art form. Specializing in high-end residential and commercial estates, our expert artisans ensure every fixture, pipe, and detail is flawlessly integrated.
             </p>
-            <p className="text-secondary text-lg mb-10 leading-relaxed">
-              No subcontractors, no call centres. Just experienced plumbers who care about doing the job right.
+            <p className="text-secondary text-lg mb-10 leading-relaxed font-light">
+              Experience unparalleled service, meticulous attention to detail, and a commitment to preserving the luxury and integrity of your property.
             </p>
 
             <div className="about-stats flex flex-wrap gap-8 md:gap-12">
@@ -93,9 +91,12 @@ const About = () => {
           </div>
 
           <div className="about-image relative">
-            <div className="w-full h-[400px] bg-[#111111] rounded-2xl border border-border flex items-center justify-center group overflow-hidden">
-              <div className="absolute inset-0 bg-accent/5 group-hover:bg-accent/10 transition-colors" />
-              <Wrench size={64} className="text-accent relative z-10 group-hover:scale-110 transition-transform duration-500" />
+            <div className="w-full h-[500px] bg-[var(--bg-color)] rounded-tl-2xl rounded-br-2xl rounded-tr-[80px] rounded-bl-[80px] border border-[var(--border-color)] overflow-hidden shadow-2xl">
+              <img 
+                src="/images/plumbing/about.png"
+                alt="Close-up of premium gold faucet craftsmanship"
+                className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-1000 hover:scale-105"
+              />
             </div>
           </div>
         </div>

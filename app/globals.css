@@ -1,28 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0a0a0a;
-  --color-surface: #111111;
-  --color-border: #1e1e1e;
-  --color-accent: var(--accent, #4fd1c5);
-  --color-secondary: #a0aec0;
+  --color-background: var(--bg-color, #0a0a0a);
+  --color-surface: var(--surface-color, #111111);
+  --color-border: var(--border-color, #1e1e1e);
+  --color-accent: var(--accent-color, #4fd1c5);
+  --color-secondary: var(--secondary-color, #a0aec0);
   
   --font-outfit: var(--font-outfit), sans-serif;
 }
 
 @layer base {
   :root {
-    --background: 10 10 10;
+    --bg-color: #0a0a0a;
+    --surface-color: #111111;
+    --border-color: #1e1e1e;
+    --accent-color: #4fd1c5;
+    --secondary-color: #a0aec0;
     --foreground: 255 255 255;
-    --accent: #4fd1c5;
   }
 
   .plumbing-theme {
-    --accent: #2563eb;
+    --bg-color: #040b16; /* Deep luxury navy */
+    --surface-color: #0a1324; /* Slightly lighter navy for cards */
+    --border-color: #1c2a42; /* Navy border */
+    --accent-color: #d4af37; /* Metallic gold */
+    --secondary-color: #94a3b8; /* Cool gray for text */
   }
 
   body {
-    background-color: #0a0a0a;
+    background-color: var(--bg-color);
     color: #ffffff;
     font-family: var(--font-outfit);
     line-height: 1.7;
@@ -65,7 +72,7 @@
   }
 
   .btn-primary {
-    background-color: var(--accent);
+    background-color: var(--accent-color);
     color: #ffffff;
     font-weight: 600;
     border-radius: 6px;
@@ -81,12 +88,12 @@
   .btn-primary:hover {
     filter: brightness(1.1);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px -10px rgba(var(--accent), 0.5);
+    box-shadow: 0 10px 20px -10px var(--accent-color);
   }
 
   .btn-outline {
-    border: 1px solid var(--accent);
-    color: var(--accent);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
     background-color: transparent;
     border-radius: 6px;
     padding: 8px 18px;
@@ -94,26 +101,26 @@
   }
 
   .btn-outline:hover {
-    background-color: var(--accent);
+    background-color: var(--accent-color);
     color: #ffffff;
   }
 
   .card-base {
-    background-color: #111111;
-    border: 1px solid #1e1e1e;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 32px;
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .card-base:hover {
-    border-color: rgba(var(--accent), 0.4);
+    border-color: var(--accent-color);
     transform: translateY(-5px);
   }
 
   .eyebrow {
     font-size: 12px;
-    color: var(--accent);
+    color: var(--accent-color);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;

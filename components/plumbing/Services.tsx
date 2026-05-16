@@ -88,31 +88,44 @@ const Services = () => {
     <section 
       id="services" 
       ref={sectionRef}
-      className="bg-[#0f0f0f] section-padding"
+      className="bg-[var(--bg-color)] section-padding"
     >
       <div className="container-custom">
-        <div className="text-center max-w-2xl mx-auto mb-16 services-heading">
-          <span className="eyebrow">What We Do</span>
-          <h2 className="section-heading">Plumbing Services You Can Count On</h2>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          <div className="services-heading">
+            <span className="eyebrow tracking-[0.15em]">Premium Services</span>
+            <h2 className="section-heading font-serif">Unmatched Expertise for Every Need</h2>
+            <p className="text-secondary text-lg mb-8 font-light max-w-md">
+              From bespoke bathroom installations to urgent commercial repairs, we bring an uncompromising level of quality to every project.
+            </p>
+            <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-color)]">
+              <img 
+                src="/images/plumbing/services.png"
+                alt="Luxury rainfall showerhead"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+              />
+            </div>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
               ref={(el) => { cardsRef.current[index] = el; }}
               className="card-base group"
             >
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                <service.icon className="text-accent" size={24} />
+              <div className="w-12 h-12 bg-accent-color/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-color/20 transition-colors border border-[var(--border-color)]">
+                <service.icon className="text-[var(--accent-color)]" size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="text-white text-lg font-bold mb-3">{service.title}</h3>
-              <p className="text-secondary text-sm leading-relaxed">
+              <h3 className="text-white text-lg font-serif font-semibold mb-3 tracking-wide">{service.title}</h3>
+              <p className="text-secondary text-sm leading-relaxed font-light">
                 {service.description}
               </p>
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );
