@@ -28,6 +28,14 @@
     --secondary-color: #a0aec0;
   }
 
+  .electrician-theme {
+    --bg-color: #080808;
+    --surface-color: #0f0f0f;
+    --border-color: #1e1e1e;
+    --accent-color: #f59e0b; /* Electric amber */
+    --secondary-color: #9ca3af;
+  }
+
   body {
     background-color: var(--bg-color);
     color: #ffffff;

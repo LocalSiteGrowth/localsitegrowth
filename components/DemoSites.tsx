@@ -20,7 +20,7 @@ const demoSites = [
     image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/a181f1ec-cf95-4ff0-4712-f1dceca21b00/publicContain",
     heading: "Electrician Business Website",
     body: "Professional, easy-to-navigate layout designed to generate calls and project requests for local electricians.",
-    link: "#",
+    link: "/electrician",
   },
   {
     image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e8e6bf84-98fd-44ad-a0e2-d62e991f0200/public",
