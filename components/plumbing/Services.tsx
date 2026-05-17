@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Droplets, AlertTriangle, Home, Flame } from "lucide-react";
@@ -32,6 +32,17 @@ const services = [
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [imageHovered, setImageHovered] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -70,7 +81,7 @@ const Services = () => {
     >
       <div className="container-custom">
 
-        {/* Heading row — full width */}
+        {/* Heading */}
         <div className="services-heading mb-16">
           <span className="eyebrow tracking-[0.15em]">Premium Services</span>
           <h2 className="section-heading font-serif mt-2">
@@ -82,22 +93,23 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Content row — image left, cards right */}
+        {/* Grid: stacked on mobile, side-by-side on desktop */}
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "48px",
+            display: "flex",
+            flexDirection: isDesktop ? "row" : "column",
+            gap: isDesktop ? "3rem" : "2rem",
             alignItems: "start",
           }}
         >
-          {/* Left — image */}
+          {/* Image */}
           <div
-            className="group"
+            onMouseEnter={() => setImageHovered(true)}
+            onMouseLeave={() => setImageHovered(false)}
             style={{
-              position: "relative",
-              width: "100%",
-              height: "480px",
+              width: isDesktop ? "50%" : "100%",
+              flexShrink: 0,
+              height: isDesktop ? "480px" : "320px",
               borderRadius: "16px",
               overflow: "hidden",
               border: "1px solid #1e1e1e",
@@ -106,35 +118,35 @@ const Services = () => {
             <img
               src="/images/plumbing/services.png"
               alt="Premium plumbing installation"
-              className="group-hover:scale-105 transition-transform duration-1000"
               style={{
-                position: "absolute",
-                inset: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
+                transform: imageHovered ? "scale(1.05)" : "scale(1)",
+                transition: "transform 1s ease",
               }}
             />
           </div>
 
-          {/* Right — 2x2 cards */}
+          {/* Cards: 2-col on mobile≥480, 1-col on small mobile, fill remaining on desktop */}
           <div
             style={{
+              flex: 1,
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "24px",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "1.5rem",
             }}
           >
             {services.map((service, index) => (
               <div
                 key={index}
-                ref={(el) => {
-                  cardsRef.current[index] = el;
-                }}
-                className="hover-gold-edge"
+                ref={(el) => { cardsRef.current[index] = el; }}
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
                 style={{
                   backgroundColor: "#111111",
-                  border: "1px solid #1e1e1e",
+                  border: `1px solid ${hoveredCard === index ? "var(--accent-color)" : "#1e1e1e"}`,
                   borderRadius: "12px",
                   padding: "28px",
                   transition: "border-color 0.3s ease",
@@ -182,21 +194,6 @@ const Services = () => {
             ))}
           </div>
         </div>
-
-        {/* Mobile layout override and hover styles */}
-        <style>{`
-          @media (max-width: 768px) {
-            .services-grid {
-              grid-template-columns: 1fr !important;
-            }
-            .services-cards {
-              grid-template-columns: 1fr !important;
-            }
-          }
-          .hover-gold-edge:hover {
-            border-color: var(--accent-color) !important;
-          }
-        `}</style>
 
       </div>
     </section>
