@@ -18,10 +18,10 @@ const projects = [
   {
     tag: "COMMERCIAL",
     bgWord: "COMMERCIAL",
-    image: "https://images.unsplash.com/photo-1484265500982-34aebf76c655?auto=format&fit=crop&w=1200&q=80",
-    name: "WAREHOUSE METAL ROOF",
+    image: "https://images.unsplash.com/photo-1602193230480-7840a38eb0c3?auto=format&fit=crop&w=1200&q=80",
+    name: "OFFICE COMPLEX ROOFING",
     description:
-      "Long run metal roofing over a 1,200sqm commercial warehouse. Completed on schedule, zero defects on final inspection.",
+      "Full commercial roofing project across a multi-storey office building. Delivered on schedule with no disruption to daily operations.",
   },
   {
     tag: "STORM DAMAGE",
