@@ -78,7 +78,7 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef}
-      className="relative min-h-screen pt-32 pb-20 lg:pt-0 lg:pb-0 flex items-center overflow-hidden"
+      className="relative min-h-screen pt-36 pb-20 lg:pt-48 lg:pb-20 flex items-center overflow-hidden"
     >
       {/* Radial Glow */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-color/15 rounded-full blur-[130px] pointer-events-none" />
