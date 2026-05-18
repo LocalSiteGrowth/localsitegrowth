@@ -89,9 +89,9 @@ const Hero = () => {
             ref={h1Ref}
             className="text-[48px] md:text-[58px] lg:text-[72px] font-extrabold text-white leading-[1.05] mb-6 flex flex-col font-serif"
           >
-            <span className="h1-line">Flawless</span>
-            <span className="h1-line">Design.</span>
-            <span className="h1-line text-[var(--accent-color)]">Masterfully Built.</span>
+            <span className="h1-line">Expert Plumbing.</span>
+            <span className="h1-line">Honest Pricing.</span>
+            <span className="h1-line text-[var(--accent-color)]">Real Results.</span>
           </h1>
 
           <p 
