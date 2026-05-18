@@ -43,15 +43,11 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Logo */}
             <Link href="/electrician" className="flex items-center">
-              <div style={{ backgroundColor: "#000000", display: "inline-flex", alignItems: "center", borderRadius: "4px" }}>
-                <div style={{ backgroundColor: "#ffffff", display: "inline-flex", alignItems: "center", mixBlendMode: "screen", isolation: "isolate" }}>
-                  <img
-                    src="/electrician-logo.png"
-                    alt="Volt Electrical"
-                    style={{ height: "80px", width: "auto", display: "block", mixBlendMode: "multiply" }}
-                  />
-                </div>
-              </div>
+              <img
+                src="/electrician-logo.png"
+                alt="Volt Electrical"
+                style={{ height: "80px", width: "auto", display: "block" }}
+              />
             </Link>
 
             {/* Nav links */}
