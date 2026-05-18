@@ -14,7 +14,7 @@ const Hero = () => {
   const btn2Ref = useRef<HTMLAnchorElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const watermarkRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const prefersReduced =
@@ -83,11 +83,13 @@ const Hero = () => {
       { opacity: 0.02, duration: 1.5, delay: 0.5, ease: "power2.out" }
     );
 
-    gsap.fromTo(
-      imageRef.current,
-      { scale: 1.05, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 1.2, delay: 0.3, ease: "power3.out" }
-    );
+    if (imageRef.current) {
+      gsap.fromTo(
+        imageRef.current,
+        { scale: 1.05, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1.2, delay: 0.3, ease: "power3.out" }
+      );
+    }
 
     return () => {
       tl.kill();
@@ -100,10 +102,36 @@ const Hero = () => {
         position: "relative",
         minHeight: "100vh",
         backgroundColor: "#0d0d0d",
-        paddingTop: "72px",
         overflow: "hidden",
       }}
     >
+      {/* Background image */}
+      <img
+        ref={imageRef}
+        src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e8e6bf84-98fd-44ad-a0e2-d62e991f0200/public"
+        alt="Ridge & Crown Roofing — professional roofing work"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: 0,
+        }}
+      />
+
+      {/* Gradient overlay — desktop: left-to-right */}
+      <div
+        className="roofing-hero-overlay"
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 1,
+          background: "linear-gradient(to right, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.92) 30%, rgba(13,13,13,0.6) 55%, rgba(13,13,13,0.2) 75%, rgba(13,13,13,0.0) 100%)",
+          pointerEvents: "none",
+        }}
+      />
+
       {/* Diagonal red stripe */}
       <div
         style={{
@@ -114,7 +142,7 @@ const Hero = () => {
           height: "100%",
           pointerEvents: "none",
           overflow: "hidden",
-          zIndex: 0,
+          zIndex: 2,
         }}
       >
         <div
@@ -124,7 +152,7 @@ const Hero = () => {
             left: "-50%",
             width: "200%",
             height: "200%",
-            background: "repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(220,38,38,0.25) 200px, rgba(220,38,38,0.25) 204px)",
+            background: "repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(220,38,38,0.12) 200px, rgba(220,38,38,0.12) 204px)",
             pointerEvents: "none",
           }}
         />
@@ -143,7 +171,7 @@ const Hero = () => {
           opacity: 0,
           pointerEvents: "none",
           lineHeight: 1,
-          zIndex: 0,
+          zIndex: 3,
           whiteSpace: "nowrap",
           userSelect: "none",
         }}
@@ -155,10 +183,10 @@ const Hero = () => {
       <div
         style={{
           position: "relative",
-          zIndex: 1,
+          zIndex: 4,
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "80px 1.5rem 60px",
+          padding: "120px 1.5rem 100px",
         }}
       >
         {/* Red tag */}
@@ -355,41 +383,18 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Hero Image */}
-      <div
-        ref={imageRef}
-        style={{
-          position: "relative",
-          width: "100%",
-          maxHeight: "520px",
-          overflow: "hidden",
-        }}
-      >
-        {/* Gradient overlay on top */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: "60px",
-            background: "linear-gradient(to bottom, #0d0d0d, transparent)",
-            zIndex: 1,
-            pointerEvents: "none",
-          }}
-        />
-        <img
-          src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e8e6bf84-98fd-44ad-a0e2-d62e991f0200/public"
-          alt="Ridge & Crown Roofing — professional roofing work"
-          style={{
-            width: "100%",
-            maxHeight: "520px",
-            objectFit: "cover",
-            display: "block",
-            borderRadius: 0,
-          }}
-        />
-      </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .roofing-hero-overlay {
+            background: linear-gradient(
+              to bottom,
+              rgba(13,13,13,0.85) 0%,
+              rgba(13,13,13,0.75) 60%,
+              rgba(13,13,13,0.9) 100%
+            ) !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };
