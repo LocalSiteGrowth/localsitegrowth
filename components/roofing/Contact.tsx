@@ -292,7 +292,7 @@ const Contact = () => {
                 <input
                   type="tel"
                   required
-                  placeholder="+64 21 000 0000"
+                  placeholder="+64 22 5707 467"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   style={{ ...fieldStyle, caretColor: "#dc2626" }}
@@ -424,7 +424,7 @@ const Contact = () => {
               CALL US
             </p>
             <a
-              href="tel:+6421000000"
+              href="tel:+642257074677"
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
                 fontSize: "28px",
@@ -435,7 +435,7 @@ const Contact = () => {
               onMouseEnter={(e) => (e.currentTarget.style.color = "#dc2626")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
             >
-              +64 21 000 0000
+              +64 22 5707 467
             </a>
           </div>
 
@@ -464,7 +464,7 @@ const Contact = () => {
               EMAIL US
             </p>
             <a
-              href="mailto:hello@ridgeandcrown.co.nz"
+              href="mailto:info@localsitegrowth.com"
               style={{
                 fontFamily: "Inter, sans-serif",
                 fontSize: "16px",
@@ -475,7 +475,7 @@ const Contact = () => {
               onMouseEnter={(e) => (e.currentTarget.style.color = "#dc2626")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
             >
-              hello@ridgeandcrown.co.nz
+              info@localsitegrowth.com
             </a>
           </div>
         </div>

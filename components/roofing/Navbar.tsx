@@ -116,7 +116,7 @@ const Navbar = () => {
             ))}
 
             <a
-              href="tel:+6421000000"
+              href="tel:+642257074677"
               style={{
                 fontFamily: "Inter, sans-serif",
                 fontSize: "14px",
@@ -125,7 +125,7 @@ const Navbar = () => {
                 textDecoration: "none",
               }}
             >
-              +64 21 000 0000
+              +64 22 5707 467
             </a>
 
             <Link
@@ -229,7 +229,7 @@ const Navbar = () => {
             ))}
 
             <a
-              href="tel:+6421000000"
+              href="tel:+642257074677"
               style={{
                 fontFamily: "Inter, sans-serif",
                 fontSize: "18px",
@@ -239,7 +239,7 @@ const Navbar = () => {
                 marginTop: "16px",
               }}
             >
-              +64 21 000 0000
+              +64 22 5707 467
             </a>
           </nav>
         </div>

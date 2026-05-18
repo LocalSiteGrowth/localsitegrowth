@@ -97,7 +97,7 @@ const Footer = () => {
 
         {/* Phone */}
         <a
-          href="tel:+6421000000"
+          href="tel:+642257074677"
           style={{
             fontFamily: "Inter, sans-serif",
             fontSize: "14px",
@@ -109,7 +109,7 @@ const Footer = () => {
           onMouseEnter={(e) => (e.currentTarget.style.color = "#dc2626")}
           onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
         >
-          +64 21 000 0000
+          +64 22 5707 467
         </a>
       </div>
 
