@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -34,6 +35,15 @@
     --border-color: #1e1e1e;
     --accent-color: #f59e0b; /* Electric amber */
     --secondary-color: #9ca3af;
+  }
+
+  .roofing-theme {
+    --bg-color: #0d0d0d;
+    --surface-color: #161616;
+    --border-color: #2a2a2a;
+    --accent-color: #dc2626;
+    --secondary-color: #8a8a8a;
+    --font-inter: 'Inter', sans-serif;
   }
 
   body {
