@@ -31,24 +31,22 @@
     --plumbing-body-font: 'Raleway', sans-serif;
   }
 
+  /* Apply Raleway to everything in plumbing theme */
+  .plumbing-theme * {
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+  /* Override headings and logo/phone (font-serif) to Cormorant Garamond */
   .plumbing-theme h1,
   .plumbing-theme h2,
   .plumbing-theme h3,
   .plumbing-theme h4,
-  .plumbing-theme .font-serif {
+  .plumbing-theme h5,
+  .plumbing-theme h6,
+  .plumbing-theme .font-serif,
+  .plumbing-theme .section-heading {
     font-family: 'Cormorant Garamond', Georgia, serif !important;
     letter-spacing: 0.01em;
-  }
-
-  .plumbing-theme p,
-  .plumbing-theme a:not(.font-serif),
-  .plumbing-theme label,
-  .plumbing-theme input,
-  .plumbing-theme textarea,
-  .plumbing-theme button,
-  .plumbing-theme span:not(.font-serif),
-  .plumbing-theme li {
-    font-family: 'Raleway', sans-serif !important;
   }
 
   .plumbing-theme .btn-primary {
