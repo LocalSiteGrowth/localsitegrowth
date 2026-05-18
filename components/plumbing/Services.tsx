@@ -11,19 +11,19 @@ const services = [
     icon: Droplets,
     title: "General Plumbing",
     description: "Taps, pipes, fixtures, and general plumbing repairs handled efficiently and to a high standard.",
-    image: "https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1585704036715-3f9428e53c1d?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: AlertTriangle,
     title: "Emergency Callouts",
     description: "Available 24 hours a day, 7 days a week for urgent plumbing issues that cannot wait.",
-    image: "https://images.unsplash.com/photo-1526898943670-92bfa9f94c12?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Home,
     title: "Bathroom Renovations",
     description: "Full bathroom fit-outs and renovations, from design through to completion.",
-    image: "https://images.unsplash.com/photo-1704731529088-19083feb5b43?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1552321903-94e1cff7c5b0?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Flame,
@@ -103,7 +103,7 @@ const Services = () => {
             display: "flex",
             flexDirection: isDesktop ? "row" : "column",
             gap: isDesktop ? "3rem" : "2rem",
-            alignItems: "start",
+            alignItems: "stretch",
           }}
         >
           {/* Image */}
@@ -113,7 +113,7 @@ const Services = () => {
             style={{
               width: isDesktop ? "50%" : "100%",
               flexShrink: 0,
-              height: isDesktop ? "688px" : "320px",
+              minHeight: isDesktop ? "100%" : "320px",
               borderRadius: "16px",
               overflow: "hidden",
               border: "1px solid #1e1e1e",
