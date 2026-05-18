@@ -11,31 +11,37 @@ const services = [
     name: "NEW ROOF INSTALLATION",
     description:
       "Full residential and commercial roof installations built to specification and local weather conditions.",
+    image: "https://images.unsplash.com/photo-1763665814538-8ba04597286c?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "RE-ROOFING",
     description:
       "Complete tear-off and replacement of existing roofs. We strip it back and start fresh the right way.",
+    image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "ROOF REPAIRS",
     description:
       "Leaks, storm damage, missing tiles, flashing failures — found and fixed before they become bigger problems.",
+    image: "https://images.unsplash.com/photo-1681049400158-0ff6249ac315?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "GUTTERING & SPOUTING",
     description:
       "Full gutter installation, replacement, and cleaning. Keep water moving where it should.",
+    image: "https://images.unsplash.com/photo-1677945451878-de79f98149c9?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "METAL ROOFING",
     description:
       "Long run metal roofing installed to exacting standards. Durable, modern, and built for decades of service.",
+    image: "https://images.unsplash.com/photo-1628002881911-8bcdfbdf320e?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "EMERGENCY CALL-OUTS",
     description:
       "Storm damage, active leaks, urgent structural concerns — we respond fast when it matters most.",
+    image: "https://images.unsplash.com/photo-1643509963821-563d2ddb0812?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -224,36 +230,69 @@ const Services = () => {
               }}
               className="roofing-service-item"
               style={{
-                borderLeft: "3px solid #dc2626",
-                paddingLeft: "24px",
-                transition: "all 200ms",
+                backgroundColor: "#1a1a1a",
+                border: "2px solid #2a2a2a",
+                overflow: "hidden",
+                transition: "border-color 200ms, transform 200ms",
                 cursor: "default",
               }}
             >
-              <p
-                className="roofing-service-name"
+              {/* Image */}
+              <div style={{ position: "relative", height: "180px", overflow: "hidden" }}>
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transition: "transform 600ms ease",
+                  }}
+                  className="roofing-service-img"
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to bottom, rgba(13,13,13,0.1) 0%, rgba(13,13,13,0.5) 100%)",
+                    pointerEvents: "none",
+                  }}
+                />
+              </div>
+              {/* Text */}
+              <div
                 style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  fontSize: "24px",
-                  color: "#ffffff",
-                  letterSpacing: "0.04em",
-                  marginBottom: 0,
-                  transition: "color 200ms",
+                  borderLeft: "3px solid #dc2626",
+                  padding: "20px",
                 }}
               >
-                {service.name}
-              </p>
-              <p
-                style={{
-                  fontFamily: "Inter, sans-serif",
-                  fontSize: "14px",
-                  color: "#8a8a8a",
-                  lineHeight: 1.6,
-                  marginTop: "8px",
-                }}
-              >
-                {service.description}
-              </p>
+                <p
+                  className="roofing-service-name"
+                  style={{
+                    fontFamily: "'Bebas Neue', sans-serif",
+                    fontSize: "22px",
+                    color: "#ffffff",
+                    letterSpacing: "0.04em",
+                    marginBottom: 0,
+                    transition: "color 200ms",
+                  }}
+                >
+                  {service.name}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontSize: "13px",
+                    color: "#8a8a8a",
+                    lineHeight: 1.6,
+                    marginTop: "6px",
+                  }}
+                >
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -277,8 +316,11 @@ const Services = () => {
           color: #dc2626 !important;
         }
         .roofing-service-item:hover {
-          border-left-color: #dc2626 !important;
-          filter: brightness(1.15);
+          border-color: #dc2626 !important;
+          transform: translateY(-3px);
+        }
+        .roofing-service-item:hover .roofing-service-img {
+          transform: scale(1.06) !important;
         }
       `}</style>
     </section>
