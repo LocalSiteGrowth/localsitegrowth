@@ -29,7 +29,7 @@ const services = [
     icon: Flame,
     title: "Hot Water Systems",
     description: "Installation, repair, and replacement of hot water cylinders and heat pumps.",
-    image: "https://images.unsplash.com/photo-U0jpGKtMtWE?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -113,7 +113,7 @@ const Services = () => {
             style={{
               width: isDesktop ? "50%" : "100%",
               flexShrink: 0,
-              height: isDesktop ? "680px" : "320px",
+              height: isDesktop ? "688px" : "320px",
               borderRadius: "16px",
               overflow: "hidden",
               border: "1px solid #1e1e1e",
