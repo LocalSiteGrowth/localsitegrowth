@@ -35,13 +35,13 @@ const services = [
     name: "METAL ROOFING",
     description:
       "Long run metal roofing installed to exacting standards. Durable, modern, and built for decades of service.",
-    image: "https://images.unsplash.com/photo-1628002881911-8bcdfbdf320e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1518736346281-76873166a64a?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "EMERGENCY CALL-OUTS",
     description:
       "Storm damage, active leaks, urgent structural concerns — we respond fast when it matters most.",
-    image: "https://images.unsplash.com/photo-1643509963821-563d2ddb0812?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1544257750-572358f5da22?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
