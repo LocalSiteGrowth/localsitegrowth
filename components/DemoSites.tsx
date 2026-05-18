@@ -26,7 +26,7 @@ const demoSites = [
     image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e8e6bf84-98fd-44ad-a0e2-d62e991f0200/public",
     heading: "Roofing Business Website",
     body: "Clean, high-converting layout designed to turn website visitors into roofing estimates and customer calls.",
-    link: "#",
+    link: "/roofing",
   },
 ];
 
