@@ -148,6 +148,7 @@ const WhyChooseUs = () => {
                   fontSize: "17px",
                   fontWeight: 600,
                   marginBottom: "10px",
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
                 }}
               >
                 {benefit.title}
@@ -158,6 +159,7 @@ const WhyChooseUs = () => {
                   fontSize: "14px",
                   lineHeight: "1.65",
                   margin: 0,
+                  fontFamily: "'Raleway', sans-serif",
                 }}
               >
                 {benefit.description}

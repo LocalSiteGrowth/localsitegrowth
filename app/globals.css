@@ -41,12 +41,12 @@
   }
 
   .plumbing-theme p,
-  .plumbing-theme a,
+  .plumbing-theme a:not(.font-serif),
   .plumbing-theme label,
   .plumbing-theme input,
   .plumbing-theme textarea,
   .plumbing-theme button,
-  .plumbing-theme span,
+  .plumbing-theme span:not(.font-serif),
   .plumbing-theme li {
     font-family: 'Raleway', sans-serif !important;
   }

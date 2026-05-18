@@ -177,15 +177,17 @@ const Services = () => {
                     fontSize: "17px",
                     fontWeight: 600,
                     marginBottom: "10px",
+                    fontFamily: "'Cormorant Garamond', Georgia, serif",
                   }}
                 >
                   {service.title}
                 </h3>
-                <p
+<p
                   style={{
                     color: "#9ca3af",
                     fontSize: "14px",
                     lineHeight: "1.65",
+                    fontFamily: "'Raleway', sans-serif",
                   }}
                 >
                   {service.description}
