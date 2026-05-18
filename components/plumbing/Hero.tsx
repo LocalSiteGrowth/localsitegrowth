@@ -91,7 +91,7 @@ const Hero = () => {
           >
             <span className="h1-line"><span className="text-[var(--accent-color)]">Expert</span> Plumbing.</span>
             <span className="h1-line"><span className="text-[var(--accent-color)]">Honest</span> Pricing.</span>
-            <span className="h1-line text-[var(--accent-color)]">Real Results.</span>
+            <span className="h1-line text-[var(--accent-color)]">Real <span className="text-white">Results.</span></span>
           </h1>
 
           <p 
