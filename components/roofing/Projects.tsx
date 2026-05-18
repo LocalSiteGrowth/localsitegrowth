@@ -10,7 +10,7 @@ const projects = [
   {
     tag: "RESIDENTIAL",
     bgWord: "RESIDENTIAL",
-    image: "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1603517431529-6ba96d7525bb?auto=format&fit=crop&w=1200&q=80",
     name: "FULL RE-ROOF · CEDAR SHINGLES",
     description:
       "Complete tear-off and re-roof of a large residential property. New underlay, new battens, premium cedar shingles throughout.",
@@ -18,7 +18,7 @@ const projects = [
   {
     tag: "COMMERCIAL",
     bgWord: "COMMERCIAL",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1484265500982-34aebf76c655?auto=format&fit=crop&w=1200&q=80",
     name: "WAREHOUSE METAL ROOF",
     description:
       "Long run metal roofing over a 1,200sqm commercial warehouse. Completed on schedule, zero defects on final inspection.",
@@ -26,7 +26,7 @@ const projects = [
   {
     tag: "STORM DAMAGE",
     bgWord: "EMERGENCY",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1200&q=80",
     name: "EMERGENCY REPAIR",
     description:
       "Called at 6am after a storm tore sections off a residential roof. On site by 8am, made safe and watertight by midday.",
