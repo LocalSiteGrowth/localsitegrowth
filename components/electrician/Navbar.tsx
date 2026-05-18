@@ -89,14 +89,13 @@ const Navbar = () => {
         <div className="container-custom flex items-center justify-between">
           {/* Logo */}
           <Link href="/electrician" className="flex items-center">
-            <div style={{ backgroundColor: "#0a0a0a", display: "inline-flex", alignItems: "center" }}>
+            <div style={{ backgroundColor: "#000000", display: "inline-flex", alignItems: "center", padding: "4px 8px", borderRadius: "4px" }}>
               <img
                 src="/electrician-logo.png"
                 alt="Volt Electrical"
                 style={{
-                  height: "40px",
+                  height: "80px",
                   width: "auto",
-                  mixBlendMode: "screen",
                   display: "block",
                 }}
               />

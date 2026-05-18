@@ -42,9 +42,14 @@ const Footer = () => {
           {/* Main row */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Logo */}
-            <Link href="/electrician" className="text-2xl tracking-tighter">
-              <span className="text-white font-extrabold">Volt</span>
-              <span className="text-[var(--accent-color)] font-light ml-1">Electrical</span>
+            <Link href="/electrician" className="flex items-center">
+              <div style={{ backgroundColor: "#000000", display: "inline-flex", alignItems: "center", padding: "4px 8px", borderRadius: "4px" }}>
+                <img
+                  src="/electrician-logo.png"
+                  alt="Volt Electrical"
+                  style={{ height: "80px", width: "auto", display: "block" }}
+                />
+              </div>
             </Link>
 
             {/* Nav links */}
