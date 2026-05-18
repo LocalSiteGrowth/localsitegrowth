@@ -87,7 +87,7 @@ const Hero = () => {
         <div className="relative z-10">
           <h1 
             ref={h1Ref}
-            className="text-[48px] md:text-[58px] lg:text-[72px] font-extrabold text-white leading-[1.05] mb-6 flex flex-col font-serif"
+            className="text-[48px] md:text-[58px] lg:text-[72px] font-bold text-white leading-[1.05] mb-6 flex flex-col"
           >
             <span className="h1-line"><span className="text-[var(--accent-color)]">Expert</span> Plumbing.</span>
             <span className="h1-line"><span className="text-[var(--accent-color)]">Honest</span> Pricing.</span>
