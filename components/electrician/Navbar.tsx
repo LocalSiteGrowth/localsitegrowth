@@ -89,10 +89,18 @@ const Navbar = () => {
         <div className="container-custom flex items-center justify-between">
           {/* Logo */}
           <Link href="/electrician" className="flex items-center">
-            <span className="text-2xl tracking-tighter">
-              <span className="text-white font-extrabold">Volt</span>
-              <span className="text-[var(--accent-color)] font-light ml-1">Electrical</span>
-            </span>
+            <div style={{ backgroundColor: "#0a0a0a", display: "inline-flex", alignItems: "center" }}>
+              <img
+                src="/electrician-logo.png"
+                alt="Volt Electrical"
+                style={{
+                  height: "40px",
+                  width: "auto",
+                  mixBlendMode: "screen",
+                  display: "block",
+                }}
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
