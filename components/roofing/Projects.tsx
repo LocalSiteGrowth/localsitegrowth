@@ -10,7 +10,7 @@ const projects = [
   {
     tag: "RESIDENTIAL",
     bgWord: "RESIDENTIAL",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=1200&q=80",
     name: "FULL RE-ROOF · CEDAR SHINGLES",
     description:
       "Complete tear-off and re-roof of a large residential property. New underlay, new battens, premium cedar shingles throughout.",
@@ -26,7 +26,7 @@ const projects = [
   {
     tag: "STORM DAMAGE",
     bgWord: "EMERGENCY",
-    image: "https://images.unsplash.com/photo-1523413307857-ef28369d4c87?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
     name: "EMERGENCY REPAIR",
     description:
       "Called at 6am after a storm tore sections off a residential roof. On site by 8am, made safe and watertight by midday.",
