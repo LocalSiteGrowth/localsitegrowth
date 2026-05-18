@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -27,6 +27,37 @@
     --border-color: #1e1e1e;
     --accent-color: #FFD700; /* Gold */
     --secondary-color: #a0aec0;
+    --plumbing-font: 'Cormorant Garamond', Georgia, serif;
+    --plumbing-body-font: 'Raleway', sans-serif;
+  }
+
+  .plumbing-theme h1,
+  .plumbing-theme h2,
+  .plumbing-theme h3,
+  .plumbing-theme h4,
+  .plumbing-theme .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    letter-spacing: 0.01em;
+  }
+
+  .plumbing-theme p,
+  .plumbing-theme a,
+  .plumbing-theme label,
+  .plumbing-theme input,
+  .plumbing-theme textarea,
+  .plumbing-theme button,
+  .plumbing-theme span,
+  .plumbing-theme li {
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+  .plumbing-theme .btn-primary {
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+  }
+
+  .plumbing-theme .btn-outline:hover {
+    color: #0a0a0a !important;
   }
 
   .electrician-theme {
