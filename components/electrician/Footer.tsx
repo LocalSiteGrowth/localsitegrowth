@@ -76,7 +76,7 @@ const Footer = () => {
                 href="https://www.localsitegrowth.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--accent-color)] hover:brightness-110 transition-all"
+                className="text-[var(--accent-color)] hover:text-white transition-colors"
               >
                 localsitegrowth.com
               </a>

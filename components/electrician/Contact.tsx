@@ -208,8 +208,8 @@ const Contact = () => {
               </div>
               <div>
                 <span className="block text-[var(--secondary-color)] text-[12px] uppercase tracking-widest mb-2">Email</span>
-                <a href="mailto:hello@voltelectrical.co.nz" className="text-[var(--secondary-color)] text-sm hover:text-[var(--accent-color)] transition-colors">
-                  hello@voltelectrical.co.nz
+                <a href="mailto:info@localsitegrowth.com" className="text-[var(--secondary-color)] text-sm hover:text-[var(--accent-color)] transition-colors">
+                  info@localsitegrowth.com
                 </a>
               </div>
               <p className="text-[var(--accent-color)] text-[13px] font-semibold">Available 24/7 for electrical emergencies.</p>

@@ -109,7 +109,7 @@ const Navbar = () => {
             <div className="flex items-center gap-6 pl-8 border-l border-[#1e1e1e]">
               <a
                 href="tel:+64225707467"
-                className="text-[13px] font-semibold text-[var(--accent-color)] hover:brightness-110 transition-all"
+                className="text-[13px] font-semibold text-[var(--accent-color)] hover:text-white transition-colors"
               >
                 +64 22 5707 467
               </a>
