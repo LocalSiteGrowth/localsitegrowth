@@ -10,6 +10,7 @@ const projects = [
   {
     tag: "RESIDENTIAL",
     bgWord: "RESIDENTIAL",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
     name: "FULL RE-ROOF · CEDAR SHINGLES",
     description:
       "Complete tear-off and re-roof of a large residential property. New underlay, new battens, premium cedar shingles throughout.",
@@ -17,6 +18,7 @@ const projects = [
   {
     tag: "COMMERCIAL",
     bgWord: "COMMERCIAL",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
     name: "WAREHOUSE METAL ROOF",
     description:
       "Long run metal roofing over a 1,200sqm commercial warehouse. Completed on schedule, zero defects on final inspection.",
@@ -24,6 +26,7 @@ const projects = [
   {
     tag: "STORM DAMAGE",
     bgWord: "EMERGENCY",
+    image: "https://images.unsplash.com/photo-1523413307857-ef28369d4c87?auto=format&fit=crop&w=1200&q=80",
     name: "EMERGENCY REPAIR",
     description:
       "Called at 6am after a storm tore sections off a residential roof. On site by 8am, made safe and watertight by midday.",
@@ -182,43 +185,46 @@ const Projects = () => {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              {/* Top colour block */}
+              {/* Image block */}
               <div
                 style={{
                   position: "relative",
                   height: "240px",
-                  background:
-                    "linear-gradient(135deg, #1a1a1a 0%, #111111 100%)",
                   overflow: "hidden",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                 }}
               >
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transition: "transform 600ms ease",
+                  }}
+                  className="roofing-card-img"
+                />
+                {/* Dark overlay so card content stays legible */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to bottom, rgba(13,13,13,0.15) 0%, rgba(13,13,13,0.55) 100%)",
+                    pointerEvents: "none",
+                  }}
+                />
                 {/* Diagonal stripe */}
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
                     background:
-                      "repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(220,38,38,0.2) 40px, rgba(220,38,38,0.2) 43px)",
+                      "repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(220,38,38,0.15) 40px, rgba(220,38,38,0.15) 43px)",
                     pointerEvents: "none",
                   }}
                 />
-                {/* Background word */}
-                <span
-                  style={{
-                    fontFamily: "'Bebas Neue', sans-serif",
-                    fontSize: "64px",
-                    color: "rgba(255,255,255,0.08)",
-                    letterSpacing: "0.04em",
-                    userSelect: "none",
-                    position: "relative",
-                    zIndex: 1,
-                  }}
-                >
-                  {project.bgWord}
-                </span>
               </div>
 
               {/* Content */}
@@ -277,6 +283,9 @@ const Projects = () => {
           .roofing-projects-grid {
             grid-template-columns: 1fr !important;
           }
+        }
+        .roofing-project-card:hover .roofing-card-img {
+          transform: scale(1.06) !important;
         }
       `}</style>
     </section>
