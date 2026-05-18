@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -36,7 +36,7 @@
     font-family: 'Raleway', sans-serif !important;
   }
 
-  /* Override headings and logo/phone (font-serif) to Cormorant Garamond */
+  /* Override headings and logo/phone (font-serif) to Cormorant Garamond — match hero weight */
   .plumbing-theme h1,
   .plumbing-theme h2,
   .plumbing-theme h3,
@@ -46,6 +46,7 @@
   .plumbing-theme .font-serif,
   .plumbing-theme .section-heading {
     font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-weight: 800 !important;
     letter-spacing: 0.01em;
   }
 
@@ -179,7 +180,7 @@
 
   .section-heading {
     font-size: clamp(32px, 5vw, 40px);
-    font-weight: 700;
+    font-weight: 800;
     color: #ffffff;
     margin-bottom: 1.5rem;
   }

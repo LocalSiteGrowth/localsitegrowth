@@ -146,7 +146,7 @@ const WhyChooseUs = () => {
                 style={{
                   color: "#ffffff",
                   fontSize: "17px",
-                  fontWeight: 600,
+                  fontWeight: 800,
                   marginBottom: "10px",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
                 }}
