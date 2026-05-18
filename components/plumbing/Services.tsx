@@ -29,7 +29,7 @@ const services = [
     icon: Flame,
     title: "Hot Water Systems",
     description: "Installation, repair, and replacement of hot water cylinders and heat pumps.",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
