@@ -44,6 +44,7 @@
   .plumbing-theme h5,
   .plumbing-theme h6,
   .plumbing-theme .font-serif,
+  .plumbing-theme .font-serif *,
   .plumbing-theme .section-heading {
     font-family: 'Cormorant Garamond', Georgia, serif !important;
     font-weight: 800 !important;
