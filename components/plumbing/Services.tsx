@@ -84,7 +84,7 @@ const Services = () => {
         {/* Heading */}
         <div className="services-heading mb-16">
           <span className="eyebrow tracking-[0.15em]">Premium Services</span>
-          <h2 className="section-heading font-serif mt-2">
+          <h2 className="section-heading font-serif mt-2" style={{ fontWeight: 800 }}>
             Unmatched Expertise for Every Need
           </h2>
           <p className="text-secondary text-lg font-light max-w-2xl mt-4">
