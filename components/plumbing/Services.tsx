@@ -11,25 +11,25 @@ const services = [
     icon: Droplets,
     title: "General Plumbing",
     description: "Taps, pipes, fixtures, and general plumbing repairs handled efficiently and to a high standard.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: AlertTriangle,
     title: "Emergency Callouts",
     description: "Available 24 hours a day, 7 days a week for urgent plumbing issues that cannot wait.",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1526898943670-92bfa9f94c12?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Home,
     title: "Bathroom Renovations",
     description: "Full bathroom fit-outs and renovations, from design through to completion.",
-    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1704731529088-19083feb5b43?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Flame,
     title: "Hot Water Systems",
     description: "Installation, repair, and replacement of hot water cylinders and heat pumps.",
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1776860155275-eee24bfb1dee?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
