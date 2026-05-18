@@ -11,21 +11,25 @@ const services = [
     icon: Droplets,
     title: "General Plumbing",
     description: "Taps, pipes, fixtures, and general plumbing repairs handled efficiently and to a high standard.",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: AlertTriangle,
     title: "Emergency Callouts",
     description: "Available 24 hours a day, 7 days a week for urgent plumbing issues that cannot wait.",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Home,
     title: "Bathroom Renovations",
     description: "Full bathroom fit-outs and renovations, from design through to completion.",
+    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Flame,
     title: "Hot Water Systems",
     description: "Installation, repair, and replacement of hot water cylinders and heat pumps.",
+    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -148,50 +152,69 @@ const Services = () => {
                   backgroundColor: "#111111",
                   border: `1px solid ${hoveredCard === index ? "var(--accent-color)" : "#1e1e1e"}`,
                   borderRadius: "12px",
-                  padding: "28px",
+                  overflow: "hidden",
                   transition: "border-color 0.3s ease",
                 }}
               >
-                <div
-                  style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "50%",
-                    backgroundColor: "rgba(245, 158, 11, 0.1)",
-                    border: "1px solid #1e1e1e",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: "20px",
-                  }}
-                >
-                  <service.icon
-                    size={22}
-                    strokeWidth={1.5}
-                    style={{ color: "#f59e0b" }}
+                {/* Image */}
+                <div style={{ position: "relative", height: "160px", overflow: "hidden" }}>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                      transform: hoveredCard === index ? "scale(1.07)" : "scale(1)",
+                      transition: "transform 0.6s ease",
+                    }}
                   />
+                  <div style={{
+                    position: "absolute", inset: 0,
+                    background: "linear-gradient(to bottom, transparent 40%, #111111 100%)",
+                  }} />
                 </div>
-                <h3
-                  style={{
-                    color: "#ffffff",
-                    fontSize: "17px",
-                    fontWeight: 800,
-                    marginBottom: "10px",
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  }}
-                >
-                  {service.title}
-                </h3>
-<p
-                  style={{
-                    color: "#9ca3af",
-                    fontSize: "14px",
-                    lineHeight: "1.65",
-                    fontFamily: "'Raleway', sans-serif",
-                  }}
-                >
-                  {service.description}
-                </p>
+                {/* Content */}
+                <div style={{ padding: "20px 24px 24px" }}>
+                  <div
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50%",
+                      backgroundColor: "rgba(255, 215, 0, 0.1)",
+                      border: "1px solid rgba(255, 215, 0, 0.2)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "14px",
+                    }}
+                  >
+                    <service.icon size={18} strokeWidth={1.5} style={{ color: "var(--accent-color)" }} />
+                  </div>
+                  <h3
+                    style={{
+                      color: "#ffffff",
+                      fontSize: "17px",
+                      fontWeight: 800,
+                      marginBottom: "8px",
+                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    }}
+                  >
+                    {service.title}
+                  </h3>
+                  <p
+                    style={{
+                      color: "#9ca3af",
+                      fontSize: "13px",
+                      lineHeight: "1.65",
+                      fontFamily: "'Raleway', sans-serif",
+                      margin: 0,
+                    }}
+                  >
+                    {service.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
