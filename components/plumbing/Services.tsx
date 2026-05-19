@@ -11,7 +11,7 @@ const services = [
     icon: Droplets,
     title: "General Plumbing",
     description: "Taps, pipes, fixtures, and general plumbing repairs handled efficiently and to a high standard.",
-    image: "https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=800&q=80",
+    image: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/25838e79-afe9-45f2-b3ef-fb998ef07200/public",
   },
   {
     icon: AlertTriangle,
