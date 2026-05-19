@@ -109,7 +109,7 @@ export default function Hero() {
         {/* Image */}
         <div
           ref={imageRef}
-          className="group relative aspect-[4/3] lg:aspect-square w-full"
+          className="group relative aspect-[4/3] lg:aspect-[4/3] w-full lg:w-[85%] mx-auto py-8"
         >
           <div className="relative h-full w-full rounded-[16px] overflow-hidden">
             <Image
