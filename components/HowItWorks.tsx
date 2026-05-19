@@ -82,7 +82,7 @@ export default function HowItWorks() {
       className="section-padding bg-[#0f0f0f]"
     >
       <div className="container-custom">
-        <div ref={headingRef} className="text-center mb-4">
+        <div ref={headingRef} className="text-center mb-20">
           <h2 className="text-3xl md:text-[40px] font-bold text-white mb-4">
             How It Works
           </h2>
@@ -97,7 +97,7 @@ export default function HowItWorks() {
           />
         </div>
 
-        <div ref={stepsRef} className="grid lg:grid-cols-3 gap-6 mt-20">
+        <div ref={stepsRef} className="grid lg:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div
               key={step.number}
