@@ -105,7 +105,7 @@ const Hero = () => {
         overflow: "hidden",
       }}
     >
-      {/* Background image */}
+      {/* Background image — positioned to show roofer on right side */}
       <img
         ref={imageRef}
         src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e8e6bf84-98fd-44ad-a0e2-d62e991f0200/public"
@@ -116,30 +116,46 @@ const Hero = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          objectPosition: "100% center",
+          objectPosition: "right center",
           zIndex: 0,
         }}
       />
 
-      {/* Gradient overlay — desktop: left-to-right */}
+      {/* Gradient overlay — heavy dark on left where text is, fully transparent on right where roofer is */}
       <div
         className="roofing-hero-overlay"
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 1,
-          background: "linear-gradient(to right, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.92) 30%, rgba(13,13,13,0.6) 55%, rgba(13,13,13,0.2) 75%, rgba(13,13,13,0.0) 100%)",
+          background:
+            "linear-gradient(to right, rgba(13,13,13,0.98) 0%, rgba(13,13,13,0.96) 25%, rgba(13,13,13,0.85) 40%, rgba(13,13,13,0.4) 58%, rgba(13,13,13,0.05) 75%, rgba(13,13,13,0.0) 100%)",
           pointerEvents: "none",
         }}
       />
 
-      {/* Diagonal red stripe */}
+      {/* Bottom gradient — fades image into dark at bottom */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "200px",
+          background:
+            "linear-gradient(to top, rgba(13,13,13,1) 0%, rgba(13,13,13,0.0) 100%)",
+          zIndex: 2,
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* Diagonal red stripe texture */}
       <div
         style={{
           position: "absolute",
           top: 0,
           left: 0,
-          width: "100%",
+          width: "50%",
           height: "100%",
           pointerEvents: "none",
           overflow: "hidden",
@@ -153,7 +169,8 @@ const Hero = () => {
             left: "-50%",
             width: "200%",
             height: "200%",
-            background: "repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(220,38,38,0.12) 200px, rgba(220,38,38,0.12) 204px)",
+            background:
+              "repeating-linear-gradient(45deg, transparent, transparent 200px, rgba(220,38,38,0.08) 200px, rgba(220,38,38,0.08) 204px)",
             pointerEvents: "none",
           }}
         />
@@ -180,16 +197,18 @@ const Hero = () => {
         ROOFING
       </div>
 
-      {/* Content */}
+      {/* Content — left half only so roofer is visible on right */}
       <div
         style={{
           position: "relative",
           zIndex: 4,
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "120px 1.5rem 100px",
+          padding: "140px 1.5rem 120px",
         }}
       >
+        <div style={{ maxWidth: "560px" }}>
+
         {/* Red tag */}
         <div
           ref={tagRef}
@@ -223,7 +242,7 @@ const Hero = () => {
             ref={line1Ref}
             style={{
               display: "block",
-              fontSize: "clamp(48px, 6.5vw, 80px)",
+              fontSize: "clamp(56px, 7vw, 96px)",
               color: "#ffffff",
             }}
           >
@@ -233,7 +252,7 @@ const Hero = () => {
             ref={line2Ref}
             style={{
               display: "block",
-              fontSize: "clamp(48px, 6.5vw, 80px)",
+              fontSize: "clamp(56px, 7vw, 96px)",
               color: "#ffffff",
             }}
           >
@@ -243,7 +262,7 @@ const Hero = () => {
             ref={line3Ref}
             style={{
               display: "block",
-              fontSize: "clamp(48px, 6.5vw, 80px)",
+              fontSize: "clamp(56px, 7vw, 96px)",
               color: "#dc2626",
             }}
           >
@@ -259,7 +278,7 @@ const Hero = () => {
             fontSize: "17px",
             color: "#8a8a8a",
             lineHeight: 1.7,
-            maxWidth: "500px",
+            maxWidth: "480px",
             marginTop: "32px",
           }}
         >
@@ -382,6 +401,7 @@ const Hero = () => {
             </div>
           ))}
         </div>
+        </div>
       </div>
 
       <style>{`
@@ -389,9 +409,9 @@ const Hero = () => {
           .roofing-hero-overlay {
             background: linear-gradient(
               to bottom,
-              rgba(13,13,13,0.85) 0%,
-              rgba(13,13,13,0.75) 60%,
-              rgba(13,13,13,0.9) 100%
+              rgba(13,13,13,0.92) 0%,
+              rgba(13,13,13,0.80) 50%,
+              rgba(13,13,13,0.95) 100%
             ) !important;
           }
         }
