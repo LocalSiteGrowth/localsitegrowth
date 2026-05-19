@@ -82,7 +82,7 @@ export default function HowItWorks() {
       className="section-padding bg-[#0f0f0f]"
     >
       <div className="container-custom">
-        <div ref={headingRef} className="text-center mb-16">
+        <div ref={headingRef} className="text-center mb-24">
           <h2 className="text-3xl md:text-[40px] font-bold text-white mb-4">
             How It Works
           </h2>
