@@ -116,7 +116,7 @@ const Hero = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          objectPosition: "right center",
+          objectPosition: "100% center",
           zIndex: 0,
         }}
       />
