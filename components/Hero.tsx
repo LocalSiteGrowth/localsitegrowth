@@ -96,7 +96,7 @@ export default function Hero() {
             Custom web design that presents your business as credible, established, and accessible.
           </p>
           <div ref={ctaRef} className="flex flex-col items-center sm:items-start gap-4">
-            <a href="#contact" className="btn-primary flex items-center gap-2 group">
+            <a href="#contact" className="btn-primary flex items-center gap-2 group lsg-hero-cta">
               Request a Free Website Demo
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
