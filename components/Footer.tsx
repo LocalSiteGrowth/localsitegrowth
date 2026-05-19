@@ -12,7 +12,7 @@ export default function Footer({
 }) {
   return (
     <footer className="bg-[#080808] border-t border-[#1e1e1e] pt-20 pb-10">
-      <div className="container-custom">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-start mb-20">
           {/* Logo */}
           <div className="flex flex-col items-start">
@@ -21,8 +21,8 @@ export default function Footer({
                 src="/logo.png"
                 alt="Local Site Growth"
                 width={160}
-                height={65}
-                style={{ width: 'auto', height: '65px' }}
+                height={85}
+                style={{ width: 'auto', height: '85px' }}
                 className="object-contain"
               />
             </Link>
