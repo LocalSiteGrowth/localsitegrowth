@@ -27,6 +27,26 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
+    <style>{`
+      .lsg-nav-link {
+        position: relative;
+        text-decoration: none;
+      }
+      .lsg-nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #2dd4bf;
+        transition: width 250ms ease;
+      }
+      .lsg-nav-link:hover::after {
+        width: 100%;
+      }
+    `}</style>
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
@@ -55,7 +75,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-secondary hover:text-white text-sm font-medium transition-colors duration-200"
+              className="lsg-nav-link text-secondary hover:text-white text-sm font-medium transition-colors duration-200"
             >
               {link.name}
             </Link>
@@ -148,5 +168,6 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    </>
   );
 }

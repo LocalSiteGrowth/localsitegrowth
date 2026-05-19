@@ -11,6 +11,26 @@ export default function Footer({
   onTermsClick: () => void; 
 }) {
   return (
+    <>
+    <style>{`
+      .lsg-footer-link {
+        position: relative;
+        text-decoration: none;
+      }
+      .lsg-footer-link::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #2dd4bf;
+        transition: width 250ms ease;
+      }
+      .lsg-footer-link:hover::after {
+        width: 100%;
+      }
+    `}</style>
     <footer className="bg-[#080808] border-t border-[#1e1e1e] pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-start mb-20">
@@ -30,22 +50,22 @@ export default function Footer({
 
           {/* Nav Links */}
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-            <Link href="#who-this-is-for" className="text-secondary hover:text-white text-[13px] transition-colors">
+            <Link href="#who-this-is-for" className="lsg-footer-link text-secondary hover:text-white text-[13px] transition-colors">
               Who This Is For
             </Link>
-            <Link href="#what-i-do" className="text-secondary hover:text-white text-[13px] transition-colors">
+            <Link href="#what-i-do" className="lsg-footer-link text-secondary hover:text-white text-[13px] transition-colors">
               What I Do
             </Link>
-            <Link href="#how-it-works" className="text-secondary hover:text-white text-[13px] transition-colors">
+            <Link href="#how-it-works" className="lsg-footer-link text-secondary hover:text-white text-[13px] transition-colors">
               How It Works
             </Link>
-            <Link href="#demo-sites" className="text-secondary hover:text-white text-[13px] transition-colors">
+            <Link href="#demo-sites" className="lsg-footer-link text-secondary hover:text-white text-[13px] transition-colors">
               Demo Sites
             </Link>
-            <Link href="#faq" className="text-secondary hover:text-white text-[13px] transition-colors">
+            <Link href="#faq" className="lsg-footer-link text-secondary hover:text-white text-[13px] transition-colors">
               FAQ
             </Link>
-            <Link href="#contact" className="text-secondary hover:text-white text-[13px] transition-colors">
+            <Link href="#contact" className="lsg-footer-link text-secondary hover:text-white text-[13px] transition-colors">
               Contact
             </Link>
           </div>
@@ -83,5 +103,6 @@ export default function Footer({
         </div>
       </div>
     </footer>
+    </>
   );
 }
