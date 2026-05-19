@@ -149,6 +149,7 @@
   .lsg-hero-cta:hover {
     color: #ffffff !important;
     filter: none !important;
+    box-shadow: none !important;
   }
 
   .btn-outline {
