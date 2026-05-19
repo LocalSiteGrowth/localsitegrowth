@@ -129,7 +129,7 @@ const Hero = () => {
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(to right, rgba(13,13,13,0.98) 0%, rgba(13,13,13,0.96) 25%, rgba(13,13,13,0.85) 40%, rgba(13,13,13,0.4) 58%, rgba(13,13,13,0.05) 75%, rgba(13,13,13,0.0) 100%)",
+            "linear-gradient(to right, rgba(13,13,13,0.98) 0%, rgba(13,13,13,0.9) 20%, rgba(13,13,13,0.5) 35%, rgba(13,13,13,0.0) 50%)",
           pointerEvents: "none",
         }}
       />
