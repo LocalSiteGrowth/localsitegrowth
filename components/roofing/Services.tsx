@@ -206,11 +206,10 @@ const Services = () => {
             fontSize: "16px",
             color: "#8a8a8a",
             marginBottom: "64px",
-            maxWidth: "560px",
+            whiteSpace: "nowrap",
           }}
         >
-          Every roof we install or repair is built to handle whatever the weather
-          throws at it.
+          Every roof we install or repair is built to handle whatever the weather throws at it.
         </p>
 
         {/* Services grid */}
