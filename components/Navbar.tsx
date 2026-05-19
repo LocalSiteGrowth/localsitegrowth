@@ -62,8 +62,8 @@ export default function Navbar() {
             src="/logo.png"
             alt="Local Site Growth"
             width={180}
-            height={85}
-            style={{ width: 'auto', height: '85px' }}
+            height={100}
+            style={{ width: 'auto', height: '100px' }}
             className="object-contain"
             priority
           />
@@ -122,8 +122,8 @@ export default function Navbar() {
                 src="/logo.png"
                 alt="Local Site Growth"
                 width={180}
-                height={85}
-                style={{ width: 'auto', height: '85px' }}
+                height={100}
+                style={{ width: 'auto', height: '100px' }}
                 className="object-contain"
               />
             </Link>

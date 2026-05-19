@@ -41,8 +41,8 @@ export default function Footer({
                 src="/logo.png"
                 alt="Local Site Growth"
                 width={160}
-                height={85}
-                style={{ width: 'auto', height: '85px' }}
+                height={100}
+                style={{ width: 'auto', height: '100px' }}
                 className="object-contain"
               />
             </Link>
