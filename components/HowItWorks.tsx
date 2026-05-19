@@ -72,34 +72,26 @@ export default function HowItWorks() {
       className="section-padding bg-[#0f0f0f]"
     >
       <div className="container-custom">
-        <div ref={headingRef} className="text-center mb-20">
-          <span className="text-[12px] text-accent font-semibold tracking-[0.1em] uppercase block mb-4">
+        <div ref={headingRef} className="text-center mb-16">
+          <h2 className="text-3xl md:text-[40px] font-bold text-white mb-3">
             How It Works
-          </span>
-          <h2 className="text-3xl md:text-[40px] font-bold text-white">
-            Three Steps. No Pressure.
           </h2>
+          <div className="mx-auto h-[2px] w-[120px] bg-accent" />
         </div>
 
-        <div ref={stepsRef} className="grid lg:grid-cols-3 gap-12 lg:gap-8 relative">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative group">
-              {/* Connector Line (Desktop) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-[20px] left-[calc(100%-40px)] w-[calc(100%-80px)] h-[1px] bg-accent/20 z-0" />
-              )}
-              
-              <div className="relative z-10">
-                <span className="absolute -top-12 -left-4 text-[100px] font-extrabold text-[#1e1e1e] select-none leading-none z-[-1]">
-                  {step.number}
-                </span>
-                <h3 className="text-xl font-semibold text-white mb-4 mt-8">
-                  {step.heading}
-                </h3>
-                <p className="text-secondary text-[15px] leading-[1.7]">
-                  {step.body}
-                </p>
+        <div ref={stepsRef} className="grid lg:grid-cols-3 gap-6">
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-[10px] p-8"
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-accent font-bold text-[15px]">{step.number}</span>
+                <h3 className="text-white font-bold text-[15px]">{step.heading}</h3>
               </div>
+              <p className="text-secondary text-[14px] leading-[1.75]">
+                {step.body}
+              </p>
             </div>
           ))}
         </div>
