@@ -110,6 +110,7 @@ const Hero = () => {
         ref={imageRef}
         src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/e8e6bf84-98fd-44ad-a0e2-d62e991f0200/public"
         alt="Ridge & Crown Roofing — professional roofing work"
+        className="roofing-hero-img"
         style={{
           position: "absolute",
           inset: 0,
@@ -406,6 +407,9 @@ const Hero = () => {
 
       <style>{`
         @media (max-width: 768px) {
+          .roofing-hero-img {
+            object-position: 70% center !important;
+          }
           .roofing-hero-overlay {
             background: linear-gradient(
               to bottom,
