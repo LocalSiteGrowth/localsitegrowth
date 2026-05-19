@@ -109,9 +109,9 @@ export default function Hero() {
         {/* Image */}
         <div
           ref={imageRef}
-          className="group relative aspect-[4/3] lg:aspect-square w-full"
+          className="group relative w-full flex items-center justify-center"
         >
-          <div className="relative h-full w-full rounded-[16px] overflow-hidden">
+          <div className="relative w-full max-w-[460px] mx-auto aspect-[4/3] rounded-[16px] overflow-hidden">
             <Image
               src="https://www.localsitegrowth.com/assets/uploads/aa502cb4-2fd4-407a-a8d1-a42ba5a5c050/f38856ae-1de7-41c8-af0f-8781d69b7b91.jpg"
               alt="Local Site Growth Showcase"
