@@ -248,7 +248,7 @@ const Projects = () => {
                 <h3
                   style={{
                     fontFamily: "'Bebas Neue', sans-serif",
-                    fontSize: "20px",
+                    fontSize: "22px",
                     fontWeight: 400,
                     letterSpacing: "0.04em",
                     color: "#ffffff",
