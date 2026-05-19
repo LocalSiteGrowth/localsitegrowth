@@ -223,7 +223,7 @@ const Hero = () => {
             ref={line1Ref}
             style={{
               display: "block",
-              fontSize: "clamp(25px, 3.5vw, 43px)",
+              fontSize: "clamp(48px, 6.5vw, 80px)",
               color: "#ffffff",
             }}
           >
@@ -233,7 +233,7 @@ const Hero = () => {
             ref={line2Ref}
             style={{
               display: "block",
-              fontSize: "clamp(25px, 3.5vw, 43px)",
+              fontSize: "clamp(48px, 6.5vw, 80px)",
               color: "#ffffff",
             }}
           >
@@ -243,7 +243,7 @@ const Hero = () => {
             ref={line3Ref}
             style={{
               display: "block",
-              fontSize: "clamp(25px, 3.5vw, 43px)",
+              fontSize: "clamp(48px, 6.5vw, 80px)",
               color: "#dc2626",
             }}
           >
