@@ -66,6 +66,16 @@ export default function HowItWorks() {
   }, []);
 
   return (
+    <>
+    <style>{`
+      .hiw-card {
+        transition: transform 300ms ease, border-color 300ms ease;
+      }
+      .hiw-card:hover {
+        transform: scale(1.03);
+        border-color: #2dd4bf !important;
+      }
+    `}</style>
     <section
       id="how-it-works"
       ref={sectionRef}
@@ -73,21 +83,31 @@ export default function HowItWorks() {
     >
       <div className="container-custom">
         <div ref={headingRef} className="text-center mb-16">
-          <h2 className="text-3xl md:text-[40px] font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-[40px] font-bold text-white mb-4">
             How It Works
           </h2>
-          <div className="mx-auto h-[2px] w-[120px] bg-accent" />
+          <div
+            className="mx-auto"
+            style={{
+              height: "1px",
+              background: "linear-gradient(to right, transparent, #2dd4bf, transparent)",
+              width: "100%",
+              maxWidth: "100%",
+            }}
+          />
         </div>
 
         <div ref={stepsRef} className="grid lg:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-[10px] p-8"
+              className="hiw-card bg-[#1a1a1a] border border-[#2a2a2a] rounded-[10px] p-8"
             >
-              <div className="flex items-center gap-3 mb-5">
-                <span className="text-accent font-bold text-[15px]">{step.number}</span>
-                <h3 className="text-white font-bold text-[15px]">{step.heading}</h3>
+              <div className="flex items-center gap-2 mb-5">
+                <span className="font-bold text-[15px]">
+                  <span className="text-white">0</span><span className="text-accent">{step.number.slice(1)}</span>
+                </span>
+                <h3 className="text-white font-bold text-[15px] ml-1">{step.heading}</h3>
               </div>
               <p className="text-secondary text-[14px] leading-[1.75]">
                 {step.body}
@@ -97,5 +117,6 @@ export default function HowItWorks() {
         </div>
       </div>
     </section>
+    </>
   );
 }
