@@ -408,7 +408,7 @@ const Hero = () => {
       <style>{`
         @media (max-width: 768px) {
           .roofing-hero-img {
-            object-position: 70% center !important;
+            object-position: 100% center !important;
           }
           .roofing-hero-overlay {
             background: linear-gradient(
