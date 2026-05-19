@@ -116,7 +116,7 @@ const Hero = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          objectPosition: "70% center",
+          objectPosition: "85% center",
           zIndex: 0,
         }}
       />
@@ -129,7 +129,7 @@ const Hero = () => {
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(to right, rgba(13,13,13,0.98) 0%, rgba(13,13,13,0.9) 20%, rgba(13,13,13,0.5) 35%, rgba(13,13,13,0.0) 50%)",
+            "linear-gradient(to right, rgba(13,13,13,0.97) 0%, rgba(13,13,13,0.95) 35%, rgba(13,13,13,0.7) 50%, rgba(13,13,13,0.1) 68%, rgba(13,13,13,0.0) 80%)",
           pointerEvents: "none",
         }}
       />
