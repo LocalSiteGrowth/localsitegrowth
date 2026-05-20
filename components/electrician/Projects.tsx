@@ -24,7 +24,7 @@ const projects = [
   {
     tag: "Emergency",
     name: "Switchboard Fault",
-    desc: "Emergency response to a switchboard fault in a residential property — fault identified and resolved within 2 hours.",
+    desc: "Emergency response to a switchboard fault in a residential property - fault identified and resolved within 2 hours.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop",
     imageAlt: "Electrical switchboard panel",
   },

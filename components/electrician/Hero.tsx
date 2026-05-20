@@ -104,7 +104,7 @@ const Hero = () => {
               className="text-[var(--secondary-color)] text-base leading-[1.75] max-w-[500px] mt-8"
             >
               Professional electrical services delivered with precision and care.
-              Residential, commercial, and emergency work across the region — every job done to the highest standard.
+              Residential, commercial, and emergency work across the region - every job done to the highest standard.
             </p>
 
             <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-10">

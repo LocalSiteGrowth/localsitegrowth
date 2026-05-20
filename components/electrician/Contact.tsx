@@ -196,7 +196,7 @@ const Contact = () => {
               <p className="text-white text-lg italic leading-[1.6] mt-4">
                 Called Volt at 9pm with a switchboard fault. They were on site within an hour, had it fixed by midnight, and cleaned up before they left. Outstanding service.
               </p>
-              <p className="text-[var(--secondary-color)] text-[13px] mt-4">— Sarah M., Residential Client</p>
+              <p className="text-[var(--secondary-color)] text-[13px] mt-4">- Sarah M., Residential Client</p>
             </div>
 
             <div style={{ borderTop: "1px solid #1e1e1e", paddingTop: "32px" }} className="flex flex-col gap-6">

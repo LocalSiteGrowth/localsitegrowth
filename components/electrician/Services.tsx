@@ -95,7 +95,7 @@ const Services = () => {
             Every Job. Every Standard.
           </h2>
           <p ref={subtextRef} className="text-[var(--secondary-color)] text-base leading-[1.7]">
-            From a single power point to a full commercial fit-out — we bring the same level of precision and care to every job we take on.
+            From a single power point to a full commercial fit-out - we bring the same level of precision and care to every job we take on.
           </p>
         </div>
 

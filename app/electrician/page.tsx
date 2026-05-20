@@ -8,7 +8,7 @@ import Contact from "@/components/electrician/Contact";
 import Footer from "@/components/electrician/Footer";
 
 export const metadata: Metadata = {
-  title: "Volt Electrical — Licensed Electricians Available 24/7",
+  title: "Volt Electrical - Licensed Electricians Available 24/7",
   description:
     "Professional electrical services for residential and commercial properties. Precision workmanship, transparent pricing, and 24/7 emergency cover.",
 };
