@@ -129,6 +129,20 @@ const Contact = () => {
           )}
         </div>
 
+        {/* Google Map */}
+        <div className="max-w-[640px] mx-auto mt-10 border border-[var(--border-color)] overflow-hidden rounded-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98956.33189391655!2d174.7063929!3d-36.8484597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6fb%3A0x500ef6143a29917!2sAuckland%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1700000000000"
+            width="100%"
+            height="300"
+            style={{ border: 0, display: "block", filter: "grayscale(100%) invert(90%) contrast(85%)" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Flow Estates Plumbing service area"
+          />
+        </div>
+
         <div className="text-center mt-12">
           <p className="text-secondary text-xs tracking-widest uppercase mb-3">Direct Line</p>
           <a href="tel:+64225707467" className="text-white text-2xl font-serif hover:text-[var(--accent-color)] hover:scale-105 inline-block transition-all duration-300">
