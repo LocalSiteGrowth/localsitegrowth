@@ -83,7 +83,7 @@ export default function Hero() {
           </span>
           <h1
             ref={h1Ref}
-            className="text-5xl md:text-6xl lg:text-[82px] font-black text-white leading-[1.05] mb-8 tracking-tight font-outfit"
+            className="text-5xl md:text-6xl lg:text-[82px] font-extrabold text-white leading-[1.05] mb-8 tracking-tight font-outfit"
           >
             <span className="h1-line block">Get Found.</span>
             <span className="h1-line block">Build Trust.</span>
