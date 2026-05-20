@@ -8,7 +8,7 @@ import Contact from "@/components/roofing/Contact";
 import Footer from "@/components/roofing/Footer";
 
 export const metadata: Metadata = {
-  title: "Ridge & Crown Roofing — Local Roofers You Can Count On",
+  title: "Ridge & Crown Roofing - Local Roofers You Can Count On",
   description:
     "Professional roofing services for residential and commercial properties. New roofs, re-roofing, repairs, and 24-hour emergency call-outs. Free quotes available.",
 };

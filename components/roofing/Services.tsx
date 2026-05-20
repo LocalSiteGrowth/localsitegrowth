@@ -22,7 +22,7 @@ const services = [
   {
     name: "ROOF REPAIRS",
     description:
-      "Leaks, storm damage, missing tiles, flashing failures — found and fixed before they become bigger problems.",
+      "Leaks, storm damage, missing tiles, flashing failures - found and fixed before they become bigger problems.",
     image: "https://images.unsplash.com/photo-1681049400158-0ff6249ac315?auto=format&fit=crop&w=800&q=80",
   },
   {
@@ -40,7 +40,7 @@ const services = [
   {
     name: "EMERGENCY CALL-OUTS",
     description:
-      "Storm damage, active leaks, urgent structural concerns — we respond fast when it matters most.",
+      "Storm damage, active leaks, urgent structural concerns - we respond fast when it matters most.",
     image: "https://images.unsplash.com/photo-1544257750-572358f5da22?auto=format&fit=crop&w=800&q=80",
   },
 ];

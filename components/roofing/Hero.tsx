@@ -283,7 +283,7 @@ const Hero = () => {
             marginTop: "32px",
           }}
         >
-          From a single repair to a full re-roof — Ridge &amp; Crown delivers
+          From a single repair to a full re-roof - Ridge &amp; Crown delivers
           roofing that holds up under anything. Residential and commercial work
           done properly, on time, every time.
         </p>
