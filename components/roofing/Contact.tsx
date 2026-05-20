@@ -411,7 +411,7 @@ const Contact = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.35302964871!2d167.71562787542462!3d-45.402220204572764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d40fb9770e6297%3A0x87c412ae24d0dcbc!2sLocal%20Site%20Growth!5e0!3m2!1sen!2snz!4v1779280981643!5m2!1sen!2snz"
             width="100%"
             height="300"
-            style={{ border: 0, display: "block", colorScheme: "dark" } as React.CSSProperties}
+            style={{ border: 0, display: "block", filter: "invert(90%) hue-rotate(180deg)" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
