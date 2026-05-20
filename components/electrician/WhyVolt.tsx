@@ -60,8 +60,7 @@ const WhyVolt = () => {
             <div
               key={i}
               ref={(el) => { pointsRef.current[i] = el; }}
-              className="py-8 lg:py-0"
-              style={{ borderRight: i < 3 ? "1px solid #1e1e1e" : "none", paddingRight: i < 3 ? "2.5rem" : "0", paddingLeft: i > 0 ? "2.5rem" : "0" }}
+              className={`py-8 lg:py-0${i > 0 ? " lg:pl-10" : ""}${i < 3 ? " lg:pr-10 lg:border-r lg:border-[#1e1e1e]" : ""}`}
             >
               <span className="text-[var(--accent-color)] text-5xl font-extrabold block mb-4" style={{ opacity: 0.4 }}>
                 {p.num}
