@@ -77,7 +77,7 @@ export default function Hero() {
         <div className="flex flex-col items-start z-10">
           <span
             ref={eyebrowRef}
-            className="text-[12px] text-accent font-semibold tracking-tight uppercase mb-6"
+            className="text-[12px] text-accent font-semibold tracking-tight uppercase mb-6 font-outfit"
           >
             Custom Web Design · Where Details Matter
           </span>
