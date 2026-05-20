@@ -216,6 +216,20 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
+        {/* Google Map */}
+        <div style={{ marginTop: "48px", border: "1px solid #1e1e1e", overflow: "hidden" }}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98956.33189391655!2d174.7063929!3d-36.8484597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6fb%3A0x500ef6143a29917!2sAuckland%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1700000000000"
+            width="100%"
+            height="300"
+            style={{ border: 0, display: "block", filter: "grayscale(100%) invert(90%) contrast(85%)" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Volt Electrical service area"
+          />
+        </div>
       </div>
     </section>
   );
