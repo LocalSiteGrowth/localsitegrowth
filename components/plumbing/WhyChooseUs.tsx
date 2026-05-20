@@ -25,7 +25,7 @@ const benefits = [
   {
     icon: Phone,
     title: "Always Reachable",
-    description: "Call us any time — day or night. For emergencies we aim to be on site within the hour.",
+    description: "Call us any time – day or night. For emergencies we aim to be on site within the hour.",
   },
 ];
 
